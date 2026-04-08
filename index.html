@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Complete study guide and preparation resource for FBLA Network Design Roleplay — master networking concepts, protocols, and ace your competition.">
+  <title>FBLA Network Design Roleplay — Ultimate Study Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Background Animation -->
+<div class="bg-animation">
+  <div class="bg-orb"></div><div class="bg-orb"></div><div class="bg-orb"></div>
+</div>
+<div class="grid-pattern"></div>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+  <a href="#" class="nav-logo"><span class="logo-icon">🌐</span> NetDesign Hub</a>
+  <ul class="nav-links">
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#osi">OSI Model</a></li>
+    <li><a href="#topologies">Topologies</a></li>
+    <li><a href="#devices">Devices</a></li>
+    <li><a href="#protocols">Protocols</a></li>
+    <li><a href="#security">Security</a></li>
+    <li><a href="#test-prep">Test Prep</a></li>
+    <li><a href="#roleplay">Roleplay</a></li>
+    <li><a href="#practice">Practice</a></li>
+  </ul>
+  <button class="mobile-toggle" aria-label="Toggle menu">☰</button>
+</nav>
+
+<main>
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-badge"><span class="pulse"></span> 2025–2026 Competitive Season</div>
+      <h1>Master the <span class="gradient-text">Network Design</span> Roleplay</h1>
+      <p>Your all-in-one preparation hub for the FBLA Network Design event. From OSI layers to live roleplay strategies — everything you need to dominate the competition.</p>
+      <div class="hero-cta">
+        <a href="#osi" class="btn btn-primary">📖 Start Learning</a>
+        <a href="#practice" class="btn btn-secondary">🧪 Practice Quiz</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Event Overview -->
+  <section class="section" id="overview">
+    <div class="section-header reveal">
+      <div class="section-label">📋 Event Details</div>
+      <h2 class="section-title">Competition Overview</h2>
+      <p class="section-subtitle">Know the format, rules, and what judges are looking for.</p>
+    </div>
+    <div class="grid-3 reveal">
+      <div class="card">
+        <div class="card-icon" style="background:rgba(59,130,246,0.15);color:var(--accent-blue);">👥</div>
+        <h3>Team Format</h3>
+        <p>Teams of 1, 2, or 3 members compete together. Scores are averaged for the objective test component.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="background:rgba(16,185,129,0.15);color:var(--accent-emerald);">📝</div>
+        <h3>Objective Test</h3>
+        <p>100 multiple-choice questions in 50 minutes. Proctored online. Top 15 teams advance to roleplay.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="background:rgba(139,92,246,0.15);color:var(--accent-purple);">🎭</div>
+        <h3>Interactive Roleplay</h3>
+        <p>20 min preparation + 7 min presentation. Judges may ask questions during your presentation.</p>
+      </div>
+    </div>
+    <div class="stats-row reveal">
+      <div class="stat-card"><div class="stat-value">100</div><div class="stat-label">Test Questions</div></div>
+      <div class="stat-card"><div class="stat-value">50m</div><div class="stat-label">Test Duration</div></div>
+      <div class="stat-card"><div class="stat-value">20m</div><div class="stat-label">Prep Time</div></div>
+      <div class="stat-card"><div class="stat-value">7m</div><div class="stat-label">Presentation</div></div>
+      <div class="stat-card"><div class="stat-value">Top 15</div><div class="stat-label">Advance</div></div>
+    </div>
+  </section>
+
+  <!-- OSI Model -->
+  <section class="section" id="osi">
+    <div class="section-header reveal">
+      <div class="section-label">🔗 Core Knowledge</div>
+      <h2 class="section-title">The OSI Model</h2>
+      <p class="section-subtitle">The foundation of all networking. Memorize this — every layer matters.</p>
+    </div>
+    <div class="osi-stack reveal">
+      <div class="osi-layer"><span class="layer-num">7</span><span class="layer-name">Application</span><span class="layer-desc">User-facing protocols: HTTP, FTP, SMTP, DNS. What users interact with.</span></div>
+      <div class="osi-layer"><span class="layer-num">6</span><span class="layer-name">Presentation</span><span class="layer-desc">Data formatting, encryption, compression. SSL/TLS operates here.</span></div>
+      <div class="osi-layer"><span class="layer-num">5</span><span class="layer-name">Session</span><span class="layer-desc">Manages sessions & connections. Authentication, reconnection handling.</span></div>
+      <div class="osi-layer"><span class="layer-num">4</span><span class="layer-name">Transport</span><span class="layer-desc">End-to-end delivery. TCP (reliable) vs UDP (fast). Port numbers live here.</span></div>
+      <div class="osi-layer"><span class="layer-num">3</span><span class="layer-name">Network</span><span class="layer-desc">Routing & IP addressing. Routers operate here. Handles packet forwarding.</span></div>
+      <div class="osi-layer"><span class="layer-num">2</span><span class="layer-name">Data Link</span><span class="layer-desc">MAC addresses, switches, frames. Error detection with CRC. ARP lives here.</span></div>
+      <div class="osi-layer"><span class="layer-num">1</span><span class="layer-name">Physical</span><span class="layer-desc">Cables, hubs, signals. Bits on the wire. Fiber, copper, wireless signals.</span></div>
+    </div>
+    <p style="text-align:center;color:var(--text-muted);margin-top:1.5rem;font-size:0.9rem;" class="reveal">💡 Mnemonic: <strong style="color:var(--accent-cyan);">"All People Seem To Need Data Processing"</strong> (Layer 7→1)</p>
+  </section>
+
+  <!-- Network Topologies -->
+  <section class="section" id="topologies">
+    <div class="section-header reveal">
+      <div class="section-label">🕸️ Architectures</div>
+      <h2 class="section-title">Network Topologies</h2>
+      <p class="section-subtitle">Understand the layout options and when to recommend each.</p>
+    </div>
+    <div class="grid-3 reveal">
+      <div class="card topo-card">
+        <div class="topo-visual">⭐</div>
+        <h3>Star Topology</h3>
+        <p>All devices connect to a central switch/hub. Easy to manage, scalable. Single point of failure at center. <strong>Most common in LANs.</strong></p>
+      </div>
+      <div class="card topo-card">
+        <div class="topo-visual">🔷</div>
+        <h3>Mesh Topology</h3>
+        <p>Every device connects to every other. Maximum redundancy and reliability. Expensive and complex. <strong>Ideal for critical infrastructure.</strong></p>
+      </div>
+      <div class="card topo-card">
+        <div class="topo-visual">🔵</div>
+        <h3>Ring Topology</h3>
+        <p>Devices form a circular chain. Data travels in one direction. Simple but a single break disrupts the network. <strong>Token Ring used this.</strong></p>
+      </div>
+      <div class="card topo-card">
+        <div class="topo-visual">📏</div>
+        <h3>Bus Topology</h3>
+        <p>All devices share a single cable (backbone). Simple and cheap. Collisions increase with more devices. <strong>Legacy — rarely used today.</strong></p>
+      </div>
+      <div class="card topo-card">
+        <div class="topo-visual">🌲</div>
+        <h3>Tree (Hybrid) Topology</h3>
+        <p>Hierarchical combination of star topologies. Scalable for large organizations. Used in campus networks. <strong>Good for growing businesses.</strong></p>
+      </div>
+      <div class="card topo-card">
+        <div class="topo-visual">🔀</div>
+        <h3>Hybrid Topology</h3>
+        <p>Combines two or more topologies. Flexible and scalable. Can be complex to design and manage. <strong>Most enterprise networks are hybrid.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Network Devices -->
+  <section class="section" id="devices">
+    <div class="section-header reveal">
+      <div class="section-label">🔧 Hardware</div>
+      <h2 class="section-title">Network Devices</h2>
+      <p class="section-subtitle">Know each device, its OSI layer, and when to use it.</p>
+    </div>
+    <div class="grid-2 reveal">
+      <div class="card">
+        <h3>🔀 Router</h3>
+        <p><strong>Layer 3 (Network)</strong> — Routes packets between different networks using IP addresses. Essential for connecting LANs to WANs and the internet. Supports NAT, DHCP, and ACLs.</p>
+      </div>
+      <div class="card">
+        <h3>🔄 Switch</h3>
+        <p><strong>Layer 2 (Data Link)</strong> — Forwards frames using MAC addresses within a LAN. Supports VLANs, STP, and port security. Much smarter than a hub.</p>
+      </div>
+      <div class="card">
+        <h3>🛡️ Firewall</h3>
+        <p><strong>Layer 3-7</strong> — Filters traffic based on rules. Can be hardware or software. Stateful firewalls track connections. Next-gen firewalls inspect application data.</p>
+      </div>
+      <div class="card">
+        <h3>📡 Access Point (AP)</h3>
+        <p><strong>Layer 1-2</strong> — Extends wired network wirelessly. Supports 802.11 standards (a/b/g/n/ac/ax). Enterprise APs support WPA3, RADIUS auth, and band steering.</p>
+      </div>
+      <div class="card">
+        <h3>⚖️ Load Balancer</h3>
+        <p><strong>Layer 4-7</strong> — Distributes traffic across multiple servers to ensure availability. Prevents overload. Methods: round-robin, least connections, IP hash.</p>
+      </div>
+      <div class="card">
+        <h3>🔌 Hub</h3>
+        <p><strong>Layer 1 (Physical)</strong> — Simple repeater that broadcasts all data to all ports. No intelligence. Causes collisions. <strong>Obsolete</strong> — replaced by switches.</p>
+      </div>
+      <div class="card">
+        <h3>🌉 Gateway</h3>
+        <p><strong>Layer varies</strong> — Translates between different network protocols or architectures. Often used as the default gateway (router) connecting a LAN to the internet.</p>
+      </div>
+      <div class="card">
+        <h3>📊 Network Monitor / SNMP</h3>
+        <p><strong>Management</strong> — SNMP (Simple Network Management Protocol) monitors device health, bandwidth, and alerts. Tools: Nagios, SolarWinds, PRTG.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Protocols & Services -->
+  <section class="section tab-section" id="protocols">
+    <div class="section-header reveal">
+      <div class="section-label">📡 Networking</div>
+      <h2 class="section-title">Protocols & Services</h2>
+      <p class="section-subtitle">The languages devices speak — know these inside and out.</p>
+    </div>
+    <div class="tab-nav reveal">
+      <button class="tab-btn active" data-tab="tab-core">Core Protocols</button>
+      <button class="tab-btn" data-tab="tab-services">Services</button>
+      <button class="tab-btn" data-tab="tab-ports">Port Numbers</button>
+    </div>
+    <div id="tab-core" class="tab-panel active reveal">
+      <div style="overflow-x:auto;">
+        <table class="proto-table">
+          <thead><tr><th>Protocol</th><th>Layer</th><th>Function</th></tr></thead>
+          <tbody>
+            <tr><td><code>TCP</code></td><td>Transport (4)</td><td>Reliable, connection-oriented delivery. Three-way handshake (SYN→SYN-ACK→ACK).</td></tr>
+            <tr><td><code>UDP</code></td><td>Transport (4)</td><td>Fast, connectionless. Used for streaming, DNS queries, gaming. No guaranteed delivery.</td></tr>
+            <tr><td><code>IP</code></td><td>Network (3)</td><td>Addressing and routing. IPv4 (32-bit) and IPv6 (128-bit). Packet-based delivery.</td></tr>
+            <tr><td><code>ARP</code></td><td>Data Link (2)</td><td>Maps IP addresses to MAC addresses within a local network.</td></tr>
+            <tr><td><code>ICMP</code></td><td>Network (3)</td><td>Error reporting and diagnostics. Used by <code>ping</code> and <code>traceroute</code>.</td></tr>
+            <tr><td><code>HTTP/HTTPS</code></td><td>Application (7)</td><td>Web communication. HTTPS adds TLS encryption for security.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div id="tab-services" class="tab-panel reveal">
+      <div style="overflow-x:auto;">
+        <table class="proto-table">
+          <thead><tr><th>Service</th><th>Protocol</th><th>What It Does</th></tr></thead>
+          <tbody>
+            <tr><td><strong>DNS</strong></td><td><code>UDP 53</code></td><td>Translates domain names to IP addresses. Hierarchical system with root, TLD, and authoritative servers.</td></tr>
+            <tr><td><strong>DHCP</strong></td><td><code>UDP 67/68</code></td><td>Automatically assigns IP addresses, subnet masks, gateways, and DNS servers. DORA process.</td></tr>
+            <tr><td><strong>NAT</strong></td><td>Layer 3</td><td>Translates private IPs to public IPs. Conserves IPv4 addresses. Types: Static, Dynamic, PAT.</td></tr>
+            <tr><td><strong>SNMP</strong></td><td><code>UDP 161/162</code></td><td>Monitors and manages network devices. Supports alerts (traps) and polling.</td></tr>
+            <tr><td><strong>FTP/SFTP</strong></td><td><code>TCP 21 / 22</code></td><td>File transfer. SFTP encrypts the connection via SSH. FTP is insecure — avoid in production.</td></tr>
+            <tr><td><strong>SMTP/POP3/IMAP</strong></td><td><code>TCP 25/110/143</code></td><td>Email protocols. SMTP sends, POP3 downloads (deletes from server), IMAP syncs across devices.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div id="tab-ports" class="tab-panel reveal">
+      <div class="ref-grid">
+        <div class="ref-item"><span class="ref-icon">🌐</span><div><div class="ref-label">HTTP — Port 80</div><div class="ref-value">Unencrypted web traffic</div></div></div>
+        <div class="ref-item"><span class="ref-icon">🔒</span><div><div class="ref-label">HTTPS — Port 443</div><div class="ref-value">Encrypted web traffic (TLS)</div></div></div>
+        <div class="ref-item"><span class="ref-icon">📁</span><div><div class="ref-label">FTP — Port 21</div><div class="ref-value">File transfer protocol</div></div></div>
+        <div class="ref-item"><span class="ref-icon">🔐</span><div><div class="ref-label">SSH — Port 22</div><div class="ref-value">Secure shell / SFTP</div></div></div>
+        <div class="ref-item"><span class="ref-icon">📧</span><div><div class="ref-label">SMTP — Port 25</div><div class="ref-value">Outgoing email</div></div></div>
+        <div class="ref-item"><span class="ref-icon">🌍</span><div><div class="ref-label">DNS — Port 53</div><div class="ref-value">Domain resolution</div></div></div>
+        <div class="ref-item"><span class="ref-icon">🏠</span><div><div class="ref-label">DHCP — Port 67/68</div><div class="ref-value">Auto IP assignment</div></div></div>
+        <div class="ref-item"><span class="ref-icon">📊</span><div><div class="ref-label">SNMP — Port 161</div><div class="ref-value">Network monitoring</div></div></div>
+        <div class="ref-item"><span class="ref-icon">🖥️</span><div><div class="ref-label">RDP — Port 3389</div><div class="ref-value">Remote desktop (Windows)</div></div></div>
+        <div class="ref-item"><span class="ref-icon">📬</span><div><div class="ref-label">POP3 — Port 110</div><div class="ref-value">Email retrieval</div></div></div>
+        <div class="ref-item"><span class="ref-icon">📥</span><div><div class="ref-label">IMAP — Port 143</div><div class="ref-value">Email sync</div></div></div>
+        <div class="ref-item"><span class="ref-icon">🖧</span><div><div class="ref-label">Telnet — Port 23</div><div class="ref-value">Unsecure remote access</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Security -->
+  <section class="section" id="security">
+    <div class="section-header reveal">
+      <div class="section-label">🔐 Defense</div>
+      <h2 class="section-title">Network Security</h2>
+      <p class="section-subtitle">20% of the test. Critical for roleplay scenarios too.</p>
+    </div>
+    <div class="accordion reveal">
+      <div class="accordion-item open">
+        <button class="accordion-header">🛡️ Firewalls & Access Control <span class="icon">▼</span></button>
+        <div class="accordion-body">
+          <p>Firewalls filter traffic based on rules (ACLs). Types include:</p>
+          <ul>
+            <li><strong>Packet-filtering:</strong> Inspects headers only (IP, port). Fast but basic.</li>
+            <li><strong>Stateful:</strong> Tracks connection state. Knows if traffic is part of an established session.</li>
+            <li><strong>Next-Gen (NGFW):</strong> Deep packet inspection, application awareness, IDS/IPS built-in.</li>
+            <li><strong>Software vs Hardware:</strong> Windows Firewall (software) vs Cisco ASA (hardware appliance).</li>
+          </ul>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">🔑 VPN & Encryption <span class="icon">▼</span></button>
+        <div class="accordion-body">
+          <p>VPNs create encrypted tunnels for secure remote access:</p>
+          <ul>
+            <li><strong>IPSec:</strong> Suite of protocols for encrypting IP traffic. Commonly used for site-to-site VPNs.</li>
+            <li><strong>SSL/TLS VPN:</strong> Works through web browsers. Used for remote employee access.</li>
+            <li><strong>WPA3:</strong> Latest Wi-Fi security standard. Uses SAE (Simultaneous Authentication of Equals).</li>
+            <li><strong>BitLocker:</strong> Windows full-disk encryption. Protects data at rest.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">🎯 Threat Mitigation <span class="icon">▼</span></button>
+        <div class="accordion-body">
+          <ul>
+            <li><strong>DoS/DDoS:</strong> Overwhelms resources with traffic. Mitigate with rate limiting, CDNs, and anti-DDoS services.</li>
+            <li><strong>Phishing:</strong> Social engineering via fake emails. Counter with user training and email filtering.</li>
+            <li><strong>Malware:</strong> Viruses, worms, ransomware. Use endpoint protection, updates, and network segmentation.</li>
+            <li><strong>Man-in-the-Middle:</strong> Intercepts communication. Prevent with encryption (HTTPS, VPN).</li>
+          </ul>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">🏗️ Zero Trust Architecture <span class="icon">▼</span></button>
+        <div class="accordion-body">
+          <p><strong>"Never trust, always verify."</strong> Core principles:</p>
+          <ul>
+            <li>Verify every user, device, and connection — even inside the network.</li>
+            <li>Least privilege access — users get only what they need.</li>
+            <li>Micro-segmentation — isolate resources to limit breach impact.</li>
+            <li>Continuous monitoring and validation of trust level.</li>
+            <li>Multi-factor authentication (MFA) is a key component.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">💾 Disaster Recovery & Backup <span class="icon">▼</span></button>
+        <div class="accordion-body">
+          <ul>
+            <li><strong>3-2-1 Rule:</strong> 3 copies, 2 different media, 1 offsite (cloud).</li>
+            <li><strong>RTO (Recovery Time Objective):</strong> Max acceptable downtime.</li>
+            <li><strong>RPO (Recovery Point Objective):</strong> Max acceptable data loss (time).</li>
+            <li><strong>Cloud Backup:</strong> AWS, Azure, Google Cloud. Automated, scalable, geo-redundant.</li>
+            <li><strong>Hot/Warm/Cold Sites:</strong> Failover locations with varying readiness levels.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Test Prep - Breakdown -->
+  <section class="section" id="test-prep">
+    <div class="section-header reveal">
+      <div class="section-label">📊 Exam Breakdown</div>
+      <h2 class="section-title">Objective Test Composition</h2>
+      <p class="section-subtitle">Know the weight of each topic to prioritize your study time.</p>
+    </div>
+    <div class="grid-2 reveal">
+      <div class="card" style="grid-column: span 1;">
+        <div class="progress-section">
+          <div class="progress-label"><span>Network Installation & Configuration</span><span>25%</span></div>
+          <div class="progress-bar"><div class="progress-fill" data-width="25%" style="width:0;background:var(--gradient-1);"></div></div>
+        </div>
+        <div class="progress-section">
+          <div class="progress-label"><span>Network Administration</span><span>25%</span></div>
+          <div class="progress-bar"><div class="progress-fill" data-width="25%" style="width:0;background:var(--gradient-2);"></div></div>
+        </div>
+        <div class="progress-section">
+          <div class="progress-label"><span>Network Security & Recovery</span><span>20%</span></div>
+          <div class="progress-bar"><div class="progress-fill" data-width="20%" style="width:0;background:linear-gradient(135deg,#f59e0b,#ef4444);"></div></div>
+        </div>
+        <div class="progress-section">
+          <div class="progress-label"><span>Network Planning</span><span>15%</span></div>
+          <div class="progress-bar"><div class="progress-fill" data-width="15%" style="width:0;background:linear-gradient(135deg,#8b5cf6,#ec4899);"></div></div>
+        </div>
+        <div class="progress-section">
+          <div class="progress-label"><span>Protocols, Services & Access</span><span>15%</span></div>
+          <div class="progress-bar"><div class="progress-fill" data-width="15%" style="width:0;background:linear-gradient(135deg,#06b6d4,#3b82f6);"></div></div>
+        </div>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom:1rem;">📌 Key Topics Per Category</h3>
+        <div style="font-size:0.9rem;color:var(--text-secondary);">
+          <p><strong style="color:var(--accent-blue);">Installation (25%):</strong> Firewalls, cabling (fiber/copper), wireless 802.11, subnetting, server setup, access points.</p><br>
+          <p><strong style="color:var(--accent-emerald);">Administration (25%):</strong> Audits, updates, user accounts, SNMP, troubleshooting tools (<code style="font-family:'JetBrains Mono';background:rgba(59,130,246,0.1);padding:2px 6px;border-radius:4px;font-size:0.85rem;color:var(--accent-blue);">ping</code>, <code style="font-family:'JetBrains Mono';background:rgba(59,130,246,0.1);padding:2px 6px;border-radius:4px;font-size:0.85rem;color:var(--accent-blue);">tracert</code>, <code style="font-family:'JetBrains Mono';background:rgba(59,130,246,0.1);padding:2px 6px;border-radius:4px;font-size:0.85rem;color:var(--accent-blue);">ipconfig</code>), load balancing.</p><br>
+          <p><strong style="color:var(--accent-amber);">Security (20%):</strong> Disaster recovery, cloud backups, DoS/phishing, Zero Trust, BitLocker, SELinux.</p><br>
+          <p><strong style="color:var(--accent-purple);">Planning (15%):</strong> Business requirements, LAN vs WAN, topology selection, cloud services.</p><br>
+          <p><strong style="color:var(--accent-cyan);">Protocols (15%):</strong> OSI model, TCP/IP, UDP, DHCP, client-server vs peer-to-peer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roleplay Tips -->
+  <section class="section" id="roleplay">
+    <div class="section-header reveal">
+      <div class="section-label">🎭 Competition Strategy</div>
+      <h2 class="section-title">Roleplay Tips & Strategy</h2>
+      <p class="section-subtitle">How to ace the 7-minute interactive presentation.</p>
+    </div>
+    <div class="grid-2 reveal">
+      <div>
+        <ul class="tips-list">
+          <li><span class="tip-num">1</span><div class="tip-content"><h4>Read the Case Study Twice</h4><p>First pass: understand the scenario. Second pass: identify specific requirements, constraints, and budget considerations.</p></div></li>
+          <li><span class="tip-num">2</span><div class="tip-content"><h4>Structure Your Response</h4><p>Use a framework: Problem → Analysis → Solution → Implementation → Benefits. This keeps your presentation organized and logical.</p></div></li>
+          <li><span class="tip-num">3</span><div class="tip-content"><h4>Justify Every Decision</h4><p>Don't just say "use a star topology." Explain WHY: scalability, easier troubleshooting, fits the business size. Judges want reasoning.</p></div></li>
+          <li><span class="tip-num">4</span><div class="tip-content"><h4>Address Security First</h4><p>Always include firewalls, VPN for remote access, WPA3 for wireless, and a backup/disaster recovery plan. Judges love comprehensive security.</p></div></li>
+          <li><span class="tip-num">5</span><div class="tip-content"><h4>Use Technical Vocabulary</h4><p>Say "implement VLAN segmentation for department isolation" not "separate the networks." Specificity shows expertise.</p></div></li>
+        </ul>
+      </div>
+      <div>
+        <ul class="tips-list">
+          <li><span class="tip-num">6</span><div class="tip-content"><h4>Plan for Scalability</h4><p>Mention how your design can grow: modular switches, cloud integration, additional subnets. Businesses grow — your network should too.</p></div></li>
+          <li><span class="tip-num">7</span><div class="tip-content"><h4>Prepare for Judge Questions</h4><p>Common questions: "What if the main switch fails?" "How do you handle 50% growth?" "What's your budget breakdown?" Have answers ready.</p></div></li>
+          <li><span class="tip-num">8</span><div class="tip-content"><h4>Dress Professionally</h4><p>Professional business attire is required and scored (5 points). Suit/blazer, dress shirt, conservative colors. First impressions matter.</p></div></li>
+          <li><span class="tip-num">9</span><div class="tip-content"><h4>Use Your Notecards Wisely</h4><p>You get 2 notecards per person. Write key diagrams, IP schemes, or decision frameworks — not scripts. Speak naturally.</p></div></li>
+          <li><span class="tip-num">10</span><div class="tip-content"><h4>Maintain Eye Contact & Confidence</h4><p>Communication skills = 10 points. Speak clearly, make eye contact with judges, and show enthusiasm for your solution.</p></div></li>
+        </ul>
+      </div>
+    </div>
+    <!-- Rubric Breakdown -->
+    <div class="card reveal" style="margin-top:2rem;">
+      <h3 style="margin-bottom:1rem;">📋 Judging Rubric Breakdown</h3>
+      <div class="grid-4" style="gap:1rem;">
+        <div class="stat-card"><div class="stat-value" style="font-size:1.5rem;">5 pts</div><div class="stat-label">Professional Attire</div></div>
+        <div class="stat-card"><div class="stat-value" style="font-size:1.5rem;">10 pts</div><div class="stat-label">Communication Skills</div></div>
+        <div class="stat-card"><div class="stat-value" style="font-size:1.5rem;">5 pts</div><div class="stat-label">Judge Interaction</div></div>
+        <div class="stat-card"><div class="stat-value" style="font-size:1.5rem;">80 pts</div><div class="stat-label">Technical Content (8 indicators × 10 pts)</div></div>
+      </div>
+      <div style="margin-top:1.5rem;">
+        <h4 style="margin-bottom:0.75rem; font-size:0.95rem;">8 Performance Indicators:</h4>
+        <div class="grid-2" style="gap:0.5rem;">
+          <div class="ref-item"><span class="ref-icon">1️⃣</span><div><div class="ref-value">Describe OSI model components & operation</div></div></div>
+          <div class="ref-item"><span class="ref-icon">2️⃣</span><div><div class="ref-value">Identify & describe network topologies</div></div></div>
+          <div class="ref-item"><span class="ref-icon">3️⃣</span><div><div class="ref-value">Explain network device functionality</div></div></div>
+          <div class="ref-item"><span class="ref-icon">4️⃣</span><div><div class="ref-value">Discuss security measures & protocols</div></div></div>
+          <div class="ref-item"><span class="ref-icon">5️⃣</span><div><div class="ref-value">Design network for specific business needs</div></div></div>
+          <div class="ref-item"><span class="ref-icon">6️⃣</span><div><div class="ref-value">Demonstrate knowledge of protocols & services</div></div></div>
+          <div class="ref-item"><span class="ref-icon">7️⃣</span><div><div class="ref-value">Explain network documentation & maintenance</div></div></div>
+          <div class="ref-item"><span class="ref-icon">8️⃣</span><div><div class="ref-value">Provide logical, organized solutions</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Practice Section -->
+  <section class="section" id="practice">
+    <div class="section-header reveal">
+      <div class="section-label">🧪 Test Yourself</div>
+      <h2 class="section-title">Practice & Review</h2>
+      <p class="section-subtitle">Quiz yourself and use flashcards to lock in your knowledge.</p>
+    </div>
+
+    <div class="tab-section">
+      <div class="tab-nav reveal">
+        <button class="tab-btn active" data-tab="tab-quiz">📝 Practice Quiz</button>
+        <button class="tab-btn" data-tab="tab-flash">🃏 Flashcards</button>
+      </div>
+      <div id="tab-quiz" class="tab-panel active reveal">
+        <p id="quiz-status" style="text-align:center;color:var(--text-muted);margin-bottom:1.5rem;font-size:0.9rem;"></p>
+        <div id="quiz-area" class="quiz-container"></div>
+      </div>
+      <div id="tab-flash" class="tab-panel reveal">
+        <div class="flashcard-container">
+          <div class="flashcard" id="flashcard">
+            <div class="flashcard-face flashcard-front" id="card-front"></div>
+            <div class="flashcard-face flashcard-back" id="card-back"></div>
+          </div>
+          <div class="flashcard-nav">
+            <button class="btn btn-secondary" id="card-prev">← Previous</button>
+            <button class="btn btn-primary" id="card-next">Next →</button>
+          </div>
+          <div class="flashcard-counter" id="card-counter"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Important Rules -->
+  <section class="section" id="rules">
+    <div class="section-header reveal">
+      <div class="section-label">⚠️ Important</div>
+      <h2 class="section-title">Rules & Reminders</h2>
+    </div>
+    <div class="grid-3 reveal">
+      <div class="card" style="border-left:3px solid var(--accent-rose);">
+        <h3>🚫 Prohibited in Roleplay</h3>
+        <ul style="color:var(--text-secondary);font-size:0.9rem;padding-left:1rem;margin-top:0.5rem;">
+          <li>No technology devices</li>
+          <li>No reference materials</li>
+          <li>No visual aids or props</li>
+          <li>Only notecards provided</li>
+        </ul>
+      </div>
+      <div class="card" style="border-left:3px solid var(--accent-amber);">
+        <h3>📅 Key Deadlines</h3>
+        <ul style="color:var(--text-secondary);font-size:0.9rem;padding-left:1rem;margin-top:0.5rem;">
+          <li>Registration by March 1</li>
+          <li>No repeats if placed top 10 at NLC</li>
+          <li>Keep scenarios confidential</li>
+          <li>Check FBLA CONNECT for samples</li>
+        </ul>
+      </div>
+      <div class="card" style="border-left:3px solid var(--accent-emerald);">
+        <h3>✅ Day-of Checklist</h3>
+        <ul style="color:var(--text-secondary);font-size:0.9rem;padding-left:1rem;margin-top:0.5rem;">
+          <li>Professional business attire</li>
+          <li>Arrive early for testing</li>
+          <li>Bring valid ID / membership card</li>
+          <li>Review this guide one last time!</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>Built for FBLA Network Design Excellence — 2025–2026 Season</p>
+  <p style="margin-top:0.5rem;">Study hard. Present with confidence. Win it all. 🏆</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
