@@ -1,0 +1,263 @@
+FBLA Network Design: Complete Study Guide 
+Competency 1: Network Installation—Planning & Configuration 
+This section focuses on the foundational design, hardware, and deployment of a network. 
+The Network Design Process 
+●​ Analyze Requirements: The network analyst interviews users and technical personnel 
+to understand business and technical goals. This is called requirements gathering. You 
+must identify functional requirements (e.g., the ability to support VoIP calls) , 
+performance requirements (e.g., high bandwidth and low latency for real-time machinery, 
+or handling large datasets quickly) , and security requirements (e.g., encryption for 
+financial services or patient records). You also use traffic analysis surveys to determine 
+the number of devices connecting at peak times. 
+●​ Planning (New Phase): This is the phase of the network design process where the 
+budget is finalized. It also includes doing a risk assessment before major changes, like 
+migrating to a hybrid cloud. 
+●​ Logical Design: Deals with network layer addressing (IPs), switching, and routing 
+protocols. This is the abstract architecture, and it is the next logical step after identifying 
+user needs. A network diagram is created to visually depict this logical flow of data 
+across a campus. 
+●​ Physical Design: Involves the actual hardware. You investigate service providers, 
+select specific equipment, and determine cable placements. A network schematic shows 
+how devices connect and communicate. A physical topology diagram shows routers, 
+switches, and servers connected in a certain pattern. Planning device placement—like 
+putting a router in the center of a home to improve wireless coverage—is part of physical 
+topology planning. 
+●​ Test, Optimize, and Document: Building a prototype, testing it, refining the design, and 
+documenting the final setup. You can use simulation software to test how a proposed 
+network will handle peak traffic during the testing and modeling phase. A network design 
+proposal outlines the hardware, software, and configuration details. 
+●​ Implementation & Handoff (New Phase): Physical implementation involves technicians 
+installing switches and connecting cables. The final step before turning over a completed 
+network to a client is network documentation , and the client signs an acceptance 
+document once they agree it meets specifications. 
+●​ Continuous Improvement (New Phase): A project manager schedules periodic design 
+reviews to ensure the network still meets business objectives long after deployment. 
+Network Architectures & Topologies 
+●​ Peer-to-Peer (P2P): All computers hold equal status. Best for small environments 
+(under 10 users). Cheap and easy to set up, but lacks centralized management and 
+security. 
+●​ Client-Server (Domain Controlled): Dedicated servers provide resources to clients. 
+Essential for enterprise environments. Offers centralized security, centralized backups, 
+and high scalability. 
+●​ Star Topology: The simplest and most cost-effective topology, ideal for a small firm 
+needing to share files and internet access. 
+●​ Mesh Topology: Offers the most redundancy, ensuring minimal downtime for critical 
+environments like a retail store. 
+●​ Scalability: Regardless of topology, a core design principle is scalability, which ensures 
+a network can easily expand as new employees join without major redesigns. 
+Server Roles & Application-Specific Servers 
+●​ Domain/Directory Server: Manages network security and authentication (e.g., Active 
+Directory using LDAP/Kerberos). 
+●​ File/Print Server: Provides centralized storage and print job spooling. 
+●​ Application Server: Hosts business logic and backend applications. 
+●​ Communication/Mail Server: Handles messaging (Exchange, Postfix). Uses SMTP 
+(sending), IMAP/POP3 (receiving). 
+●​ Web Server: Hosts web pages using HTTP/HTTPS (IIS, Apache, Nginx). 
+Physical Implementation & Cabling 
+●​ Twisted Pair (Copper): Uses RJ-45 connectors. Categories include Cat5e (1 Gbps), 
+Cat6 (10 Gbps at shorter distances), and Cat6a (10 Gbps). A technician would use CAT6 
+over CAT5e because CAT6 supports higher speeds and frequencies. Susceptible to EMI 
+(Electromagnetic Interference) unless shielded (STP). 
+●​ Coaxial: Used mostly for broadband internet (cable modems). Uses F-type or BNC 
+connectors. 
+●​ Fiber Optic: Uses light to transmit data. Immune to EMI. Single-mode (long distance, 
+laser) vs. Multi-mode (shorter distance, LED). Connectors include LC, SC, and ST. 
+Anatomy: The cable consists of the core (where light travels), the cladding (reflective 
+material surrounding the core to keep light inside), the buffer, and the outer 
+jacket/sheath. Kevlar is often used for strength. 
+●​ Wired vs. Wireless: Transmission speed is a primary consideration when choosing 
+between wired and wireless connections. 
+●​ Wiring Systems: 
+○​ Horizontal Wiring: Runs from telecommunications closets out to the wall plates 
+in offices/cubicles. 
+○​ Vertical (Backbone) Wiring: Runs between floors in a multi-floor structure to 
+connect different telecommunications closets. 
+Networking Hardware 
+●​ Switches (Layer 2): Connect devices within a LAN. Forward data based on MAC 
+addresses. 
+●​ Routers (Layer 3): Connect different networks (LAN to WAN). Forward data based on 
+IP addresses. Routers are essential to connect multiple switches located in different 
+wings of a building for proper data communication. 
+●​ Network Interface Cards (NICs): The physical hardware connecting a workstation to 
+the network. Every NIC has a unique, hardcoded MAC address. 
+Competency 2: Problem Solving/Troubleshooting 
+Effective troubleshooting requires a systematic approach and familiarity with diagnostic tools 
+and frameworks. 
+The Standard Troubleshooting Methodology 
+1.​ Identify the problem (gather information, duplicate the issue). 
+2.​ Establish a theory of probable cause (start with the obvious, check physical 
+connections). 
+3.​ Test the theory to determine the cause. 
+4.​ Establish a plan of action and implement the solution. 
+5.​ Verify full system functionality and implement preventive measures. 
+6.​ Document findings, actions, and outcomes. 
+The OSI Model and Protocol Data Units (PDUs) 
+●​ Layer 4 (Transport): Data is formatted into a Segment (includes port numbers like 80 or 
+443). 
+●​ Layer 3 (Network): Formatted into a Packet (includes IP addresses). 
+●​ Layer 2 (Data Link): Formatted into a Frame (includes MAC addresses). 
+●​ Layer 1 (Physical): The layer most directly concerned with defining the physical layout 
+of the network. 
+Diagnostic Utilities & Command Line Tools 
+●​ Hardware Tools: A cable tester verifies that a network cable is wired correctly and 
+functioning. A protocol analyzer is used to analyze packet loss and latency. A loopback 
+plug tests network interface cards (NICs). 
+●​ ping: Tests connectivity to a host using ICMP echo requests. 
+●​ tracert / traceroute: Maps the routing path a packet takes to its destination. 
+●​ ipconfig / ifconfig: Displays current TCP/IP network configuration values. 
+●​ ipconfig /displaydns: Shows the contents of the locally cached DNS entries. 
+●​ nslookup: Queries DNS servers to resolve hostnames to IP addresses. 
+●​ netstat: Displays active network connections and listening ports. 
+●​ ROMMON (ROM Monitor): A low-level operating system used for testing, 
+troubleshooting, and password recovery on Cisco routers when the main operating 
+system fails to load. 
+Common Network Issues 
+●​ Incorrect IP Configuration: An APIPA address (169.254.x.x) means the client cannot 
+reach the DHCP server. 
+●​ DNS Failures: If you can ping a website by its IP address but not its domain name, the 
+DNS server is down or misconfigured. 
+●​ Permissions/Rights: If a user can log in but cannot open a file, it is an access control 
+list (ACL) or sharing permission issue. 
+Competency 3: Network Administrator Functions 
+Administration is about keeping the network secure, optimized, organized, and properly 
+documented. 
+Asset & Resource Management 
+●​ Naming Conventions: Standardizing computer, user, and group names is critical for 
+scale. 
+●​ FQDN (Fully Qualified Domain Name): The complete domain name for a specific host, 
+consisting of the hostname appended to the domain name with a period (e.g., 
+server1.example.com). 
+●​ Management Practices: 
+○​ Asset Management: Tracking the physical hardware (what you own and where it 
+is). 
+○​ Configuration Management: Recording specific configuration details, such as 
+the exact OS versions installed on all switches and routers. 
+○​ Change Management: Documenting the changes made during a network 
+upgrade for compliance purposes. 
+○​ File Organization: Apply the principle of least privilege. Manage disk resources 
+by setting user quotas and managing NTFS/Share permissions. Use file 
+compression to reduce file sizes and save disk space. 
+Network Security Wheel 
+●​ A continuous lifecycle model for security policy compliance. The phases are: Secure, 
+Monitor, Test, and Improve. Regular patching of network operating systems helps protect 
+against security vulnerabilities. 
+IPv4 Private Address Ranges (RFC 1918) 
+Non-routable IP addresses used strictly for internal networks: 
+●​ Class A: 10.0.0.0 to 10.255.255.255 
+●​ Class B: 172.16.0.0 to 172.31.255.255 
+●​ Class C: 192.168.0.0 to 192.168.255.255 
+Optimization, Tuning, & Maintenance 
+●​ Segmenting: Breaking a large network into smaller subnets to reduce broadcast traffic 
+and increase speed. 
+●​ Load Balancing: Distributing network or application traffic across a number of servers to 
+prevent single points of failure. 
+●​ QoS (Quality of Service): A network optimization technique involving prioritizing certain 
+types of traffic, like VoIP calls, over less critical data. 
+●​ Monitoring & Base Lining: Establishing a baseline of normal network activity to easily 
+identify bottlenecks, fault management issues, or anomalous behavior. Network 
+monitoring software continuously checks performance and alerts administrators. For 
+example, performance monitoring triggers an alert when CPU usage on a core router 
+exceeds 85%. Logs should also be reviewed regularly to detect unusual activity. 
+●​ Capacity Planning: Using historical bandwidth data to decide when to upgrade internet 
+service. 
+●​ Maintenance Types: 
+○​ Preventive Maintenance: Upgrading firmware on switches to improve 
+performance. 
+○​ Corrective Maintenance: Replacing a failed switch during off-peak hours to 
+minimize disruption. 
+○​ Predictive Maintenance: Focusing on identifying potential issues before they 
+cause failures. 
+Competency 4: Configuration of Internet Resources 
+This covers the protocols and architectures that connect internal users to the outside world 
+securely. 
+DNS, Web Services & P2P 
+●​ DNS (Domain Name System): Resolves URLs to IP addresses. Operates in a hierarchy 
+(Root servers -> Top-Level Domain servers -> Authoritative Name servers). 
+●​ SSL/TLS: Encrypts data between a web server and a browser using public key 
+infrastructure (PKI) and certificates. 
+●​ Legacy P2P (Gnutella): An older decentralized peer-to-peer network protocol used to 
+search for shared resources across the internet. 
+Network Address Translation (NAT) 
+●​ Translates private internal IP addresses to public external ones. 
+●​ Inside Local: The actual private IP address assigned to a host on the internal network. 
+●​ Inside Global: The public IP address that the outside world sees representing your 
+internal host. 
+Security Architectures & Policies 
+●​ Firewalls: Filter traffic based on rules. Policies define their behavior: 
+○​ Permissive: Permits access through all ports except those explicitly denied. 
+○​ Restrictive: Denies access through all ports except those explicitly allowed 
+(standard best practice). 
+●​ DMZ (Demilitarized Zone): A subnetwork that exposes an organization's external-facing 
+services (Web, FTP, Mail) to the internet, keeping the internal LAN secure behind a 
+second firewall. 
+●​ Intranet vs. Extranet: An intranet is a private network for employees only. An extranet 
+securely shares part of a business's operations with external suppliers/partners. 
+Infrastructure & Remote Access 
+●​ VPN (Virtual Private Network): Creates an encrypted tunnel over a public network 
+using protocols like PPTP or L2TP. 
+●​ Dark Fiber: Fiber optic cable that has been laid underground but is not currently in use 
+or "lit" by equipment. 
+Competency 5: Backup and Disaster Recovery 
+Data loss can destroy an organization. You must know how to prevent it and recover from it. 
+Disaster Recovery (DR) vs. Business Continuity (BC) 
+●​ Disaster Recovery: The technical steps taken to restore IT infrastructure and data after 
+a catastrophic event. 
+●​ Business Continuity: The broader plan of keeping the business operational during the 
+disaster. 
+Backup Strategies & The Archive Bit 
+●​ The archive bit is a file attribute that tells backup software if a file has changed. 
+●​ Full Backup: Backs up everything and resets the archive bit. Slowest to run, fastest to 
+restore. 
+●​ Incremental Backup: Backs up only data changed since the last backup and resets the 
+archive bit. Fastest to run, slowest to restore. 
+●​ Differential Backup: Backs up data changed since the last full backup and does not 
+reset the archive bit. 
+Redundancy & Storage Architectures 
+●​ Fault Tolerance: A requirement ensuring the network remains operational even if one 
+main link fails. 
+●​ Redundancy Testing: Disconnecting the primary internet line intentionally to test if the 
+backup connection kicks in tests redundancy. Testing the failover time between primary 
+and backup servers is also a measure of redundancy. 
+●​ UPS (Uninterruptible Power Supply): Provides emergency battery backup power to 
+servers/switches and includes surge suppression. 
+●​ NAS (Network Attached Storage): A single storage device that operates on data files 
+over a standard Ethernet network. 
+●​ SAN (Storage Area Network): A specialized, high-speed network that provides 
+centralized, fault-tolerant block-level data storage. 
+●​ RAID (Redundant Array of Independent Disks): 
+○​ RAID 0: Striping (speed, no redundancy). 
+○​ RAID 1: Mirroring (high redundancy, 50% capacity). 
+○​ RAID 3: Byte-level striping with a dedicated parity disk. 
+○​ RAID 5: Striping with distributed parity (requires at least 3 disks, tolerates 1 drive 
+failure). 
+Competency 6: Configuration Network Resources & Services 
+This focuses on logical network mapping, dynamic addressing, advanced testing, and access 
+control. 
+Implementation Testing Protocols 
+●​ Load Testing: Testing post-implementation to ensure the network can actually handle 
+expected live traffic loads. 
+●​ Coverage Testing: Testing a new wireless network by having users (like students) 
+connect from various physical locations to map signal strength. 
+The DHCP DORA Process 
+When a client requests an IP address from a DHCP server, it uses a 4-step process: 
+●​ Discover: The client broadcasts a message looking for a DHCP server. 
+●​ Offer: The server responds with an available IP address. 
+●​ Request: The client broadcasts a message accepting the offered IP. It must be a 
+broadcast so that all other potential DHCP servers know the client has accepted an IP 
+and can withdraw their offers. 
+●​ Acknowledge: The server finalizes the lease. 
+VLANs (Virtual LANs) & Segmentation 
+●​ A VLAN logically groups devices together on the same broadcast domain, regardless of 
+their physical location on the switches. Used for security, segmentation, and reducing 
+broadcast traffic. 
+●​ Logical Segmentation: Designing a network that separates departments (e.g., 
+accounting and human resources data) on different VLANs. 
+●​ 802.1Q: The standard protocol for VLAN tagging on network trunks. 
+Security Controls & Remote Access 
+●​ MAC (Mandatory Access Control): The strictest model. The OS constrains the ability 
+of a user to access a file based on security clearances and labels. 
+●​ DAC (Discretionary Access Control): The owner of the data defines who gets access. 
+Standard in Windows. 
+●​ Remote Management: Use secure protocols like SSH (port 22) instead of unencrypted 
+protocols like Telnet (port 23) when configuring routers and switches remotely. 
+ 

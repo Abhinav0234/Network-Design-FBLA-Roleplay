@@ -63,6 +63,12 @@ const quizData = [
   { q: "Which wireless standard offers the fastest speeds?", opts: ["802.11a", "802.11g", "802.11n", "802.11ax (Wi-Fi 6)"], ans: 3 },
   { q: "What type of cable is MOST resistant to electromagnetic interference?", opts: ["Cat5e UTP", "Coaxial", "Fiber optic", "Cat6 STP"], ans: 2 },
   { q: "Which security model never implicitly trusts any user or device?", opts: ["Perimeter Security", "Zero Trust", "Defense in Depth", "Network Segmentation"], ans: 1 },
+  { q: "You can ping a server by its IP address, but not by its domain name. What is likely failing?", opts: ["The DHCP server", "The DNS server", "The default gateway", "The subnet mask"], ans: 1 },
+  { q: "Which backup type backs up everything changed since the last full backup and does NOT reset the archive bit?", opts: ["Full Backup", "Incremental Backup", "Differential Backup", "Copy Backup"], ans: 2 },
+  { q: "What is the 3rd step in the standard troubleshooting methodology?", opts: ["Identify the problem", "Establish a theory of probable cause", "Test the theory to determine the cause", "Establish a plan of action"], ans: 2 },
+  { q: "A workstation has an IP address of 169.254.10.5. What does this indicate?", opts: ["It is on a Class C network", "It has successfully reached the router", "It cannot reach the DHCP server (APIPA)", "It is connected via VPN"], ans: 2 },
+  { q: "In the DHCP DORA process, why is the 'Request' packet broadcasted?", opts: ["To find the MAC address", "So all other DHCP servers know the offer was accepted", "To bypass the firewall", "Because it does not know the server's IP"], ans: 1 },
+
 ];
 
 let currentQuiz = 0, quizScore = 0, quizAnswered = 0;
@@ -74,7 +80,7 @@ function renderQuiz() {
     quizContainer.innerHTML = `<div class="quiz-result">
       <p style="color:var(--text-muted);margin-bottom:0.5rem;">Your Score</p>
       <div class="score">${quizScore}/${quizData.length}</div>
-      <p style="color:var(--text-secondary);margin:1rem 0;">${quizScore >= 10 ? "Outstanding! You're ready to compete! 🏆" : quizScore >= 7 ? "Great job! Keep studying the areas you missed. 💪" : "Keep studying — review the sections above and try again! 📚"}</p>
+      <p style="color:var(--text-secondary);margin:1rem 0;">${quizScore >= 15 ? "Outstanding! You're ready to compete! 🏆" : quizScore >= 10 ? "Great job! Keep studying the areas you missed. 💪" : "Keep studying — review the sections above and try again! 📚"}</p>
       <button class="btn btn-primary" onclick="resetQuiz()">Try Again</button>
     </div>`;
     quizStatus.textContent = '';
@@ -121,6 +127,12 @@ const flashcards = [
   { front: "Fiber vs Copper Cabling", back: "Fiber: uses light, faster (up to 100Gbps), immune to EMI, longer distances, more expensive. Copper: uses electrical signals, cheaper, easier to install, limited distance (~100m for Cat6)." },
   { front: "What is DNS?", back: "Domain Name System — translates human-readable domain names (google.com) to IP addresses (142.250.x.x). Uses port 53. Hierarchical with root servers, TLD servers, and authoritative servers." },
   { front: "What is Network Segmentation?", back: "Dividing a network into isolated zones to contain threats, improve performance, and enforce access control. Achieved through VLANs, subnets, and firewalls." },
+  { front: "What is a PDU at Layer 4 (Transport)?", back: "Segment. It includes port numbers (e.g., 80, 443). At Layer 3 it is a Packet (IPs), and at Layer 2 it is a Frame (MACs)." },
+  { front: "What is the difference between MAC and DAC?", back: "MAC (Mandatory Access Control) is strictest, OS restricts access based on labels/clearances. DAC (Discretionary Access Control) lets the data owner decide who has access." },
+  { front: "What is the Archive Bit?", back: "A file attribute used by backup software. It indicates if a file has been modified since it was last backed up. Full and Incremental backups reset it; Differential does not." },
+  { front: "What is a DMZ?", back: "Demilitarized Zone. A subnetwork exposing public-facing services (Web, Email) to the internet while keeping the internal LAN secure behind another firewall." },
+  { front: "IPv4 Private Ranges", back: "Class A: 10.0.0.0 - 10.255.255.255 | Class B: 172.16.0.0 - 172.31.255.255 | Class C: 192.168.0.0 - 192.168.255.255. These are non-routable on the internet." },
+
 ];
 
 let currentCard = 0;

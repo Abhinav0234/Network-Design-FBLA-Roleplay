@@ -20,11 +20,14 @@
   <a href="#" class="nav-logo"><span class="logo-icon">🌐</span> NetDesign Hub</a>
   <ul class="nav-links">
     <li><a href="#overview">Overview</a></li>
+    <li><a href="#planning">Planning</a></li>
     <li><a href="#osi">OSI Model</a></li>
     <li><a href="#topologies">Topologies</a></li>
     <li><a href="#devices">Devices</a></li>
     <li><a href="#protocols">Protocols</a></li>
     <li><a href="#security">Security</a></li>
+    <li><a href="#troubleshooting">Diagnostics</a></li>
+    <li><a href="#admin">Admin</a></li>
     <li><a href="#test-prep">Test Prep</a></li>
     <li><a href="#roleplay">Roleplay</a></li>
     <li><a href="#practice">Practice</a></li>
@@ -79,6 +82,64 @@
     </div>
   </section>
 
+  <!-- Planning, Cabling & Architectures -->
+  <section class="section" id="planning">
+    <div class="section-header reveal">
+      <div class="section-label">📐 Competency 1</div>
+      <h2 class="section-title">Planning, Cabling & Architectures</h2>
+      <p class="section-subtitle">Understanding the lifecycle of a network from requirements to physical wiring.</p>
+    </div>
+
+    <!-- Design Process -->
+    <div class="grid-2 reveal">
+      <div class="card">
+        <h3>📋 The Network Design Process</h3>
+        <p>A structured approach to ensure the network meets business objectives:</p>
+        <ul style="padding-left:1.5rem; margin-top:0.5rem; color:var(--text-secondary); font-size:0.95rem;">
+          <li><strong style="color:var(--text-primary);">1. Analyze Requirements:</strong> Gather functional (e.g., VoIP support), performance (e.g., high bandwidth), and security needs. Use traffic analysis surveys.</li>
+          <li><strong style="color:var(--text-primary);">2. Planning:</strong> Finalize budget and perform risk assessments before major changes.</li>
+          <li><strong style="color:var(--text-primary);">3. Logical Design:</strong> Architect IP addressing, switching, and routing protocols. Create a logical network diagram.</li>
+          <li><strong style="color:var(--text-primary);">4. Physical Design:</strong> Select hardware, plan device placement (e.g., APs for wireless coverage), and define the physical topology schema.</li>
+          <li><strong style="color:var(--text-primary);">5. Test & Document:</strong> Use simulation software. Create a network design proposal.</li>
+          <li><strong style="color:var(--text-primary);">6. Implementation & Handoff:</strong> Install hardware. Client signs an acceptance document based on network documentation.</li>
+          <li><strong style="color:var(--text-primary);">7. Continuous Improvement:</strong> Schedule periodic design reviews.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>🔌 Physical Implementation & Cabling</h3>
+        <ul style="padding-left:1.5rem; margin-top:0.5rem; color:var(--text-secondary); font-size:0.95rem;">
+          <li><strong style="color:var(--text-primary);">Twisted Pair (Copper):</strong> Uses RJ-45. <strong>Cat5e</strong> (1 Gbps), <strong>Cat6</strong> (10 Gbps, shorter distances, higher frequencies), <strong>Cat6a</strong> (10 Gbps). Susceptible to EMI unless shielded (STP).</li>
+          <li><strong style="color:var(--text-primary);">Coaxial:</strong> Broadband internet. Uses F-type or BNC connectors.</li>
+          <li><strong style="color:var(--text-primary);">Fiber Optic:</strong> Uses light. Immune to EMI. Consists of core, cladding (keeps light inside), buffer, and jacket. <strong>Single-mode</strong> (long distance, laser) vs <strong>Multi-mode</strong> (short distance, LED). Connectors: LC, SC, ST.</li>
+          <li><strong style="color:var(--text-primary);">Wired vs Wireless:</strong> Transmission speed is a primary consideration when choosing between wired and wireless connections.</li>
+        </ul>
+        <h4 style="margin-top:1rem; font-size:1rem;">🏢 Wiring Systems</h4>
+        <p style="color:var(--text-secondary); font-size:0.95rem;"><strong>Horizontal Wiring:</strong> Runs from telecom closet to wall plates in offices.<br><strong>Vertical (Backbone):</strong> Runs between floors to connect closets.</p>
+      </div>
+    </div>
+
+    <!-- Network Architectures -->
+    <div class="grid-2 reveal" style="margin-top:1.5rem;">
+      <div class="card">
+        <h3>🏢 Client-Server (Domain Controlled)</h3>
+        <p>Dedicated servers provide resources to clients. Essential for enterprise environments. Offers <strong>centralized security</strong>, <strong>centralized backups</strong>, and <strong>high scalability</strong>.</p>
+      </div>
+      <div class="card">
+        <h3>🤝 Peer-to-Peer (P2P)</h3>
+        <p>All computers hold equal status. Best for small environments (under 10 users). Cheap and easy to set up, but lacks centralized management and security.</p>
+        <p style="margin-top:0.5rem; color:var(--text-muted); font-size:0.85rem;"><em>Legacy P2P (Gnutella): An older decentralized protocol for shared resource searching.</em></p>
+      </div>
+      <div class="card">
+        <h3>📐 Scalability Principle</h3>
+        <p>Regardless of topology, a core design principle is <strong>scalability</strong> — ensuring a network can easily expand as new employees join without major redesigns.</p>
+      </div>
+      <div class="card">
+        <h3>🌐 Web Server</h3>
+        <p>Hosts web pages using HTTP/HTTPS. Common software: <strong>IIS</strong>, <strong>Apache</strong>, <strong>Nginx</strong>.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- OSI Model -->
   <section class="section" id="osi">
     <div class="section-header reveal">
@@ -90,10 +151,10 @@
       <div class="osi-layer"><span class="layer-num">7</span><span class="layer-name">Application</span><span class="layer-desc">User-facing protocols: HTTP, FTP, SMTP, DNS. What users interact with.</span></div>
       <div class="osi-layer"><span class="layer-num">6</span><span class="layer-name">Presentation</span><span class="layer-desc">Data formatting, encryption, compression. SSL/TLS operates here.</span></div>
       <div class="osi-layer"><span class="layer-num">5</span><span class="layer-name">Session</span><span class="layer-desc">Manages sessions & connections. Authentication, reconnection handling.</span></div>
-      <div class="osi-layer"><span class="layer-num">4</span><span class="layer-name">Transport</span><span class="layer-desc">End-to-end delivery. TCP (reliable) vs UDP (fast). Port numbers live here.</span></div>
-      <div class="osi-layer"><span class="layer-num">3</span><span class="layer-name">Network</span><span class="layer-desc">Routing & IP addressing. Routers operate here. Handles packet forwarding.</span></div>
-      <div class="osi-layer"><span class="layer-num">2</span><span class="layer-name">Data Link</span><span class="layer-desc">MAC addresses, switches, frames. Error detection with CRC. ARP lives here.</span></div>
-      <div class="osi-layer"><span class="layer-num">1</span><span class="layer-name">Physical</span><span class="layer-desc">Cables, hubs, signals. Bits on the wire. Fiber, copper, wireless signals.</span></div>
+      <div class="osi-layer"><span class="layer-num">4</span><span class="layer-name">Transport</span><span class="layer-desc">End-to-end delivery. TCP (reliable) vs UDP (fast). Port numbers live here. PDU: <strong>Segment</strong>.</span></div>
+      <div class="osi-layer"><span class="layer-num">3</span><span class="layer-name">Network</span><span class="layer-desc">Routing & IP addressing. Routers operate here. Handles packet forwarding. PDU: <strong>Packet</strong>.</span></div>
+      <div class="osi-layer"><span class="layer-num">2</span><span class="layer-name">Data Link</span><span class="layer-desc">MAC addresses, switches, frames. Error detection (CRC). ARP lives here. PDU: <strong>Frame</strong>.</span></div>
+      <div class="osi-layer"><span class="layer-num">1</span><span class="layer-name">Physical</span><span class="layer-desc">Cables, hubs, signals. Bits on the wire. Defines the physical layout of the network.</span></div>
     </div>
     <p style="text-align:center;color:var(--text-muted);margin-top:1.5rem;font-size:0.9rem;" class="reveal">💡 Mnemonic: <strong style="color:var(--accent-cyan);">"All People Seem To Need Data Processing"</strong> (Layer 7→1)</p>
   </section>
@@ -139,17 +200,17 @@
     </div>
   </section>
 
-  <!-- Network Devices -->
+  <!-- Network Devices & Server Roles -->
   <section class="section" id="devices">
     <div class="section-header reveal">
       <div class="section-label">🔧 Hardware</div>
-      <h2 class="section-title">Network Devices</h2>
+      <h2 class="section-title">Network Devices & Server Roles</h2>
       <p class="section-subtitle">Know each device, its OSI layer, and when to use it.</p>
     </div>
     <div class="grid-2 reveal">
       <div class="card">
         <h3>🔀 Router</h3>
-        <p><strong>Layer 3 (Network)</strong> — Routes packets between different networks using IP addresses. Essential for connecting LANs to WANs and the internet. Supports NAT, DHCP, and ACLs.</p>
+        <p><strong>Layer 3 (Network)</strong> — Routes packets between different networks using IP addresses. Essential for connecting LANs to WANs and the internet. Supports NAT, DHCP, and ACLs. Connects multiple switches in different wings of a building.</p>
       </div>
       <div class="card">
         <h3>🔄 Switch</h3>
@@ -176,8 +237,40 @@
         <p><strong>Layer varies</strong> — Translates between different network protocols or architectures. Often used as the default gateway (router) connecting a LAN to the internet.</p>
       </div>
       <div class="card">
+        <h3>💳 Network Interface Card (NIC)</h3>
+        <p><strong>Layer 1/2</strong> — Physical hardware connecting a workstation to the network. Every NIC has a unique, hardcoded <strong>MAC address</strong> burned in by the manufacturer.</p>
+      </div>
+      <div class="card">
         <h3>📊 Network Monitor / SNMP</h3>
         <p><strong>Management</strong> — SNMP (Simple Network Management Protocol) monitors device health, bandwidth, and alerts. Tools: Nagios, SolarWinds, PRTG.</p>
+      </div>
+    </div>
+
+    <!-- Server Roles -->
+    <div class="section-header reveal" style="margin-top:3rem;">
+      <div class="section-label">🖥️ Server Types</div>
+      <h2 class="section-title" style="font-size:1.8rem;">Server Roles & Application Servers</h2>
+    </div>
+    <div class="grid-3 reveal">
+      <div class="card">
+        <h3>🔐 Domain / Directory Server</h3>
+        <p>Manages network security and authentication (e.g., <strong>Active Directory</strong> using <strong>LDAP/Kerberos</strong>).</p>
+      </div>
+      <div class="card">
+        <h3>📂 File / Print Server</h3>
+        <p>Provides centralized storage and print job spooling for the organization.</p>
+      </div>
+      <div class="card">
+        <h3>⚙️ Application Server</h3>
+        <p>Hosts business logic and backend applications for client devices.</p>
+      </div>
+      <div class="card">
+        <h3>📧 Communication / Mail Server</h3>
+        <p>Handles messaging (Exchange, Postfix). Uses <strong>SMTP</strong> (sending), <strong>IMAP/POP3</strong> (receiving).</p>
+      </div>
+      <div class="card">
+        <h3>🌐 Web Server</h3>
+        <p>Hosts web pages using HTTP/HTTPS. Software: <strong>IIS</strong>, <strong>Apache</strong>, <strong>Nginx</strong>.</p>
       </div>
     </div>
   </section>
@@ -215,11 +308,12 @@
           <thead><tr><th>Service</th><th>Protocol</th><th>What It Does</th></tr></thead>
           <tbody>
             <tr><td><strong>DNS</strong></td><td><code>UDP 53</code></td><td>Translates domain names to IP addresses. Hierarchical system with root, TLD, and authoritative servers.</td></tr>
-            <tr><td><strong>DHCP</strong></td><td><code>UDP 67/68</code></td><td>Automatically assigns IP addresses, subnet masks, gateways, and DNS servers. DORA process.</td></tr>
-            <tr><td><strong>NAT</strong></td><td>Layer 3</td><td>Translates private IPs to public IPs. Conserves IPv4 addresses. Types: Static, Dynamic, PAT.</td></tr>
+            <tr><td><strong>DHCP (DORA)</strong></td><td><code>UDP 67/68</code></td><td><strong>Discover, Offer, Request, Acknowledge.</strong> Client broadcasts request, Server offers, Client broadcasts acceptance (so other DHCP servers withdraw offers), Server ACKs the lease.</td></tr>
+            <tr><td><strong>NAT</strong></td><td>Layer 3</td><td>Translates private IPs to public. <strong>Inside Local</strong> (private IP) → <strong>Inside Global</strong> (public IP seen by outside world). Types: Static, Dynamic, PAT.</td></tr>
             <tr><td><strong>SNMP</strong></td><td><code>UDP 161/162</code></td><td>Monitors and manages network devices. Supports alerts (traps) and polling.</td></tr>
             <tr><td><strong>FTP/SFTP</strong></td><td><code>TCP 21 / 22</code></td><td>File transfer. SFTP encrypts the connection via SSH. FTP is insecure — avoid in production.</td></tr>
             <tr><td><strong>SMTP/POP3/IMAP</strong></td><td><code>TCP 25/110/143</code></td><td>Email protocols. SMTP sends, POP3 downloads (deletes from server), IMAP syncs across devices.</td></tr>
+            <tr><td><strong>SSL/TLS</strong></td><td>Layer 5-6</td><td>Encrypts data between web server and browser using <strong>Public Key Infrastructure (PKI)</strong> and certificates.</td></tr>
           </tbody>
         </table>
       </div>
@@ -242,6 +336,54 @@
     </div>
   </section>
 
+  <!-- IP Addressing & Segmentation -->
+  <section class="section" id="ip-addressing">
+    <div class="section-header reveal">
+      <div class="section-label">🌐 Addressing</div>
+      <h2 class="section-title">IP Addressing, VLANs & Segmentation</h2>
+      <p class="section-subtitle">Understand addressing schemes, network segmentation, and logical organization.</p>
+    </div>
+    <div class="grid-3 reveal">
+      <div class="card" style="border-left:3px solid var(--accent-blue);">
+        <h3>🅰️ Class A</h3>
+        <p><code>10.0.0.0</code> — <code>10.255.255.255</code></p>
+        <p style="color:var(--text-muted); font-size:0.85rem;">Large enterprises. 16 million+ hosts.</p>
+      </div>
+      <div class="card" style="border-left:3px solid var(--accent-purple);">
+        <h3>🅱️ Class B</h3>
+        <p><code>172.16.0.0</code> — <code>172.31.255.255</code></p>
+        <p style="color:var(--text-muted); font-size:0.85rem;">Medium-sized organizations.</p>
+      </div>
+      <div class="card" style="border-left:3px solid var(--accent-emerald);">
+        <h3>🅲 Class C</h3>
+        <p><code>192.168.0.0</code> — <code>192.168.255.255</code></p>
+        <p style="color:var(--text-muted); font-size:0.85rem;">Small networks. Home & small office.</p>
+      </div>
+    </div>
+    <p style="text-align:center;color:var(--text-muted);margin-top:1rem;font-size:0.85rem;" class="reveal">📌 RFC 1918 — These are <strong style="color:var(--accent-cyan);">non-routable</strong> private addresses used strictly for internal networks.</p>
+
+    <div class="grid-2 reveal" style="margin-top:2rem;">
+      <div class="card">
+        <h3>🔀 VLANs (Virtual LANs)</h3>
+        <ul style="padding-left:1.5rem; margin-top:0.5rem; color:var(--text-secondary); font-size:0.95rem;">
+          <li>Logically group devices on the same broadcast domain <strong>regardless of physical switch location</strong>.</li>
+          <li>Used for security, segmentation, and reducing broadcast traffic.</li>
+          <li><strong>Logical Segmentation:</strong> Separate departments (e.g., Accounting and HR) on different VLANs.</li>
+          <li><strong>802.1Q:</strong> The standard protocol for VLAN tagging on network trunks.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>✂️ Network Segmenting</h3>
+        <ul style="padding-left:1.5rem; margin-top:0.5rem; color:var(--text-secondary); font-size:0.95rem;">
+          <li><strong>Segmenting:</strong> Breaking a large network into smaller subnets to reduce broadcast traffic and increase speed.</li>
+          <li>Routers and <strong>Layer 3 switches</strong> are used to route between segments.</li>
+          <li><strong>Subnetting:</strong> Using subnet masks (e.g., <code>255.255.255.0</code>) to define network boundaries.</li>
+          <li>Improves performance, security, and manageability.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <!-- Security -->
   <section class="section" id="security">
     <div class="section-header reveal">
@@ -260,6 +402,11 @@
             <li><strong>Next-Gen (NGFW):</strong> Deep packet inspection, application awareness, IDS/IPS built-in.</li>
             <li><strong>Software vs Hardware:</strong> Windows Firewall (software) vs Cisco ASA (hardware appliance).</li>
           </ul>
+          <p style="margin-top:0.75rem;"><strong>Firewall Policies:</strong></p>
+          <ul>
+            <li><strong>Permissive:</strong> Permits all ports except those explicitly denied.</li>
+            <li><strong>Restrictive:</strong> Denies all ports except those explicitly allowed <em>(best practice)</em>.</li>
+          </ul>
         </div>
       </div>
       <div class="accordion-item">
@@ -269,9 +416,23 @@
           <ul>
             <li><strong>IPSec:</strong> Suite of protocols for encrypting IP traffic. Commonly used for site-to-site VPNs.</li>
             <li><strong>SSL/TLS VPN:</strong> Works through web browsers. Used for remote employee access.</li>
+            <li><strong>PPTP / L2TP:</strong> Older VPN tunneling protocols used over public networks.</li>
             <li><strong>WPA3:</strong> Latest Wi-Fi security standard. Uses SAE (Simultaneous Authentication of Equals).</li>
             <li><strong>BitLocker:</strong> Windows full-disk encryption. Protects data at rest.</li>
           </ul>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">🔄 Network Security Wheel <span class="icon">▼</span></button>
+        <div class="accordion-body">
+          <p>A continuous lifecycle model for security policy compliance. Phases:</p>
+          <ul>
+            <li><strong>Secure:</strong> Implement policies, firewalls, and patching.</li>
+            <li><strong>Monitor:</strong> Watch for anomalous traffic and logs.</li>
+            <li><strong>Test:</strong> Perform vulnerability scans and penetration testing.</li>
+            <li><strong>Improve:</strong> Review results and refine the security posture.</li>
+          </ul>
+          <p style="margin-top:0.5rem; color:var(--text-secondary); font-size:0.9rem;"><em>Regular patching of network operating systems helps protect against newly discovered vulnerabilities.</em></p>
         </div>
       </div>
       <div class="accordion-item">
@@ -282,6 +443,20 @@
             <li><strong>Phishing:</strong> Social engineering via fake emails. Counter with user training and email filtering.</li>
             <li><strong>Malware:</strong> Viruses, worms, ransomware. Use endpoint protection, updates, and network segmentation.</li>
             <li><strong>Man-in-the-Middle:</strong> Intercepts communication. Prevent with encryption (HTTPS, VPN).</li>
+          </ul>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">🚧 Security Architecture & Access Control <span class="icon">▼</span></button>
+        <div class="accordion-body">
+          <ul>
+            <li><strong>DMZ (Demilitarized Zone):</strong> Subnetwork exposing external-facing services (Web, FTP, Mail) to the internet, keeping internal LAN secure behind a second firewall.</li>
+            <li><strong>Intranet:</strong> A private network accessible only to employees.</li>
+            <li><strong>Extranet:</strong> Securely shares part of a business's operations with external suppliers/partners.</li>
+            <li><strong>MAC (Mandatory Access Control):</strong> Strictest model. OS restricts access based on security clearances and labels.</li>
+            <li><strong>DAC (Discretionary Access Control):</strong> Data owner defines who gets access. Standard in Windows.</li>
+            <li><strong>Remote Management:</strong> Use <strong>SSH (port 22)</strong> instead of unencrypted <strong>Telnet (port 23)</strong>.</li>
+            <li><strong>Dark Fiber:</strong> Fiber optic cable that has been laid underground but is not currently in use or "lit."</li>
           </ul>
         </div>
       </div>
@@ -302,11 +477,184 @@
         <button class="accordion-header">💾 Disaster Recovery & Backup <span class="icon">▼</span></button>
         <div class="accordion-body">
           <ul>
+            <li><strong>Disaster Recovery vs Business Continuity:</strong> DR is technical steps to restore IT. BC is the broader plan to keep the business operational.</li>
             <li><strong>3-2-1 Rule:</strong> 3 copies, 2 different media, 1 offsite (cloud).</li>
             <li><strong>RTO (Recovery Time Objective):</strong> Max acceptable downtime.</li>
             <li><strong>RPO (Recovery Point Objective):</strong> Max acceptable data loss (time).</li>
             <li><strong>Cloud Backup:</strong> AWS, Azure, Google Cloud. Automated, scalable, geo-redundant.</li>
             <li><strong>Hot/Warm/Cold Sites:</strong> Failover locations with varying readiness levels.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Troubleshooting -->
+  <section class="section tab-section" id="troubleshooting">
+    <div class="section-header reveal">
+      <div class="section-label">🛠️ Competency 2</div>
+      <h2 class="section-title">Troubleshooting & Diagnostics</h2>
+      <p class="section-subtitle">A systematic approach to identifying and fixing network faults.</p>
+    </div>
+
+    <div class="tab-nav reveal">
+      <button class="tab-btn active" data-tab="tab-methodology">6-Step Methodology</button>
+      <button class="tab-btn" data-tab="tab-tools">Diagnostic Tools</button>
+      <button class="tab-btn" data-tab="tab-issues">Common Issues</button>
+    </div>
+
+    <div id="tab-methodology" class="tab-panel active reveal">
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-icon" style="background:rgba(59,130,246,0.15);color:var(--accent-blue);">1</div>
+          <h3>Identify the Problem</h3>
+          <p>Gather information, question users, and attempt to duplicate the issue.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon" style="background:rgba(16,185,129,0.15);color:var(--accent-emerald);">2</div>
+          <h3>Establish a Theory</h3>
+          <p>Start with the obvious (e.g., check physical connections, power) and establish a theory of probable cause.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon" style="background:rgba(139,92,246,0.15);color:var(--accent-purple);">3</div>
+          <h3>Test the Theory</h3>
+          <p>Test your theory to determine the exact cause of the problem.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon" style="background:rgba(245,158,11,0.15);color:var(--accent-amber);">4</div>
+          <h3>Plan of Action</h3>
+          <p>Establish a plan of action to resolve the problem and implement the solution safely.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon" style="background:rgba(6,182,212,0.15);color:var(--accent-cyan);">5</div>
+          <h3>Verify Functionality</h3>
+          <p>Verify full system functionality and implement preventive measures.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon" style="background:rgba(244,63,94,0.15);color:var(--accent-rose);">6</div>
+          <h3>Document</h3>
+          <p>Document your findings, actions taken, and final outcomes for future reference.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-tools" class="tab-panel reveal">
+      <div class="grid-2">
+        <div class="card">
+          <h3>💻 Command Line Utilities</h3>
+          <ul style="padding-left:1.5rem; margin-top:0.5rem; color:var(--text-secondary); font-size:0.95rem;">
+            <li><code>ping</code>: Tests connectivity using ICMP echo requests.</li>
+            <li><code>tracert / traceroute</code>: Maps the routing path a packet takes.</li>
+            <li><code>ipconfig / ifconfig</code>: Displays TCP/IP config values.</li>
+            <li><code>ipconfig /displaydns</code>: Shows locally cached DNS entries.</li>
+            <li><code>nslookup</code>: Queries DNS to resolve hostnames to IPs.</li>
+            <li><code>netstat</code>: Displays active network connections/ports.</li>
+            <li><code>ROMMON</code>: Low-level OS for password recovery on Cisco routers.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>🔧 Hardware Tools</h3>
+          <ul style="padding-left:1.5rem; margin-top:0.5rem; color:var(--text-secondary); font-size:0.95rem;">
+            <li><strong>Cable Tester:</strong> Verifies that a network cable is wired correctly and functioning physically.</li>
+            <li><strong>Protocol Analyzer:</strong> Used to analyze packet loss, latency, and deep inspect traffic.</li>
+            <li><strong>Loopback Plug:</strong> Tests Network Interface Cards (NICs) to ensure they can send and receive properly.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-issues" class="tab-panel reveal">
+      <div class="grid-3">
+        <div class="card" style="border-left:3px solid var(--accent-rose);">
+          <h3>APIPA Address</h3>
+          <p>If a device shows an IP of <code>169.254.x.x</code>, it means it cannot reach the DHCP server to get a valid lease.</p>
+        </div>
+        <div class="card" style="border-left:3px solid var(--accent-amber);">
+          <h3>DNS Failure</h3>
+          <p>If you can ping a site by IP but not by its domain name, the DNS server is down or misconfigured.</p>
+        </div>
+        <div class="card" style="border-left:3px solid var(--accent-blue);">
+          <h3>Permissions Issue</h3>
+          <p>If a user can log into the network but cannot open a specific file, it's likely an ACL or sharing permission issue.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Admin, Optimization & Backup -->
+  <section class="section" id="admin">
+    <div class="section-header reveal">
+      <div class="section-label">⚙️ Competency 3</div>
+      <h2 class="section-title">Administration, Optimization & Backup</h2>
+      <p class="section-subtitle">Keeping the network optimized, documented, and resilient against failures.</p>
+    </div>
+    <div class="accordion reveal">
+      <div class="accordion-item open">
+        <button class="accordion-header">📁 Asset & Resource Management <span class="icon">▼</span></button>
+        <div class="accordion-body">
+          <ul>
+            <li><strong>Naming Conventions:</strong> Standardizing computer, user, and group names is critical for scale.</li>
+            <li><strong>FQDN (Fully Qualified Domain Name):</strong> The complete domain name (e.g., <code>server1.example.com</code>).</li>
+            <li><strong>Asset Management:</strong> Tracking physical hardware you own and its location.</li>
+            <li><strong>Configuration Management:</strong> Recording OS versions and specific configs on switches/routers.</li>
+            <li><strong>Change Management:</strong> Documenting upgrades and changes for compliance.</li>
+            <li><strong>File Organization:</strong> Apply principle of least privilege. Manage disk quotas, NTFS/Share permissions, and use file compression to save space.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">⚡ Optimization, Tuning & Maintenance <span class="icon">▼</span></button>
+        <div class="accordion-body">
+          <ul>
+            <li><strong>QoS (Quality of Service):</strong> Prioritizes critical traffic (like VoIP) over less critical data.</li>
+            <li><strong>Load Balancing:</strong> Distributes traffic across multiple servers to prevent single points of failure.</li>
+            <li><strong>Baselining & Monitoring:</strong> Establishing normal activity baselines to identify anomalies (e.g., alert when CPU hits 85%). Review logs regularly.</li>
+            <li><strong>Capacity Planning:</strong> Using historical bandwidth data to decide when to upgrade internet service.</li>
+          </ul>
+          <p style="margin-top:0.75rem;"><strong>Maintenance Types:</strong></p>
+          <ul>
+            <li><strong>Preventive:</strong> Upgrading firmware on switches to improve performance.</li>
+            <li><strong>Corrective:</strong> Replacing a failed switch during off-peak hours to minimize disruption.</li>
+            <li><strong>Predictive:</strong> Identifying potential issues before they cause failures.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">🧪 Implementation Testing <span class="icon">▼</span></button>
+        <div class="accordion-body">
+          <ul>
+            <li><strong>Load Testing:</strong> Testing post-implementation to ensure the network can handle expected live traffic loads.</li>
+            <li><strong>Coverage Testing:</strong> Testing a new wireless network by having users connect from various physical locations to map signal strength.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">💾 Backup Strategies & The Archive Bit <span class="icon">▼</span></button>
+        <div class="accordion-body">
+          <p>The <strong>Archive Bit</strong> is a file attribute that tells backup software if a file has changed.</p>
+          <ul>
+            <li><strong>Full Backup:</strong> Backs up everything, resets archive bit. Slowest to run, <em>fastest to restore</em>.</li>
+            <li><strong>Incremental:</strong> Backs up data changed since last backup, resets archive bit. Fastest to run, <em>slowest restore</em>.</li>
+            <li><strong>Differential:</strong> Backs up data changed since last full backup, <strong>DOES NOT</strong> reset archive bit.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">🗄️ Redundancy & Storage Architectures <span class="icon">▼</span></button>
+        <div class="accordion-body">
+          <ul>
+            <li><strong>Fault Tolerance:</strong> Ensures the network remains operational even if one main link fails.</li>
+            <li><strong>Redundancy Testing:</strong> Intentionally disconnecting primary lines to verify failover to backup systems.</li>
+            <li><strong>UPS (Uninterruptible Power Supply):</strong> Provides emergency battery backup power with surge suppression.</li>
+            <li><strong>NAS (Network Attached Storage):</strong> Single storage device operating on data files over standard Ethernet.</li>
+            <li><strong>SAN (Storage Area Network):</strong> Specialized, high-speed network providing centralized, fault-tolerant block-level storage.</li>
+          </ul>
+          <p style="margin-top:0.75rem;"><strong>RAID Levels:</strong></p>
+          <ul>
+            <li><strong>RAID 0:</strong> Striping — speed, no redundancy.</li>
+            <li><strong>RAID 1:</strong> Mirroring — high redundancy, 50% capacity.</li>
+            <li><strong>RAID 3:</strong> Byte-level striping with a dedicated parity disk.</li>
+            <li><strong>RAID 5:</strong> Striping with distributed parity (requires 3+ disks, tolerates 1 drive failure).</li>
           </ul>
         </div>
       </div>
