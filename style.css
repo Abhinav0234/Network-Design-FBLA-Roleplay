@@ -392,3 +392,95 @@ main { position: relative; z-index: 1; padding-top: 70px; }
 .flashcard-face p { color: var(--text-secondary); font-size: 0.95rem; }
 .flashcard-nav { display: flex; gap: 1rem; justify-content: center; margin-top: 1.5rem; }
 .flashcard-counter { text-align: center; margin-top: 0.75rem; color: var(--text-muted); font-size: 0.85rem; }
+
+/* ==================== Roleplay Toolkit ==================== */
+.toolkit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(520px, 1fr)); gap: 1.5rem; }
+@media (max-width: 600px) { .toolkit-grid { grid-template-columns: 1fr; } }
+
+.toolkit-card {
+  background: var(--bg-card); border: 1px solid var(--border-glass);
+  border-radius: var(--radius); padding: 0; overflow: hidden;
+  transition: var(--transition); position: relative;
+}
+.toolkit-card:hover { border-color: rgba(255,255,255,0.12); box-shadow: var(--shadow-glow); }
+
+.toolkit-card-header {
+  display: flex; align-items: center; gap: 1rem; padding: 1.5rem 1.5rem 1rem;
+}
+.toolkit-card-icon {
+  width: 44px; height: 44px; border-radius: 10px; display: flex;
+  align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0;
+}
+.toolkit-card-title { font-size: 1.15rem; font-weight: 700; }
+.toolkit-card-subtitle { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
+
+.toolkit-badge {
+  display: inline-flex; padding: 3px 10px; border-radius: 50px; font-size: 0.65rem;
+  font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-left: auto;
+}
+.badge-topology { background: rgba(59,130,246,0.2); color: var(--accent-blue); }
+.badge-security { background: rgba(244,63,94,0.2); color: var(--accent-rose); }
+.badge-protocol { background: rgba(6,182,212,0.2); color: var(--accent-cyan); }
+.badge-hardware { background: rgba(245,158,11,0.2); color: var(--accent-amber); }
+.badge-storage { background: rgba(139,92,246,0.2); color: var(--accent-purple); }
+.badge-service { background: rgba(16,185,129,0.2); color: var(--accent-emerald); }
+
+.toolkit-card-body { padding: 0 1.5rem 1.5rem; }
+
+.toolkit-label {
+  font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 1.5px; margin-bottom: 0.5rem; margin-top: 1rem;
+}
+.label-what { color: var(--accent-cyan); }
+.label-when { color: var(--accent-emerald); }
+.label-pros { color: var(--accent-emerald); }
+.label-cons { color: var(--accent-rose); }
+.label-scenario { color: var(--accent-purple); }
+.label-cost { color: var(--accent-amber); }
+
+.toolkit-card-body ul {
+  list-style: none; padding: 0; margin: 0;
+}
+.toolkit-card-body ul li {
+  padding: 3px 0; font-size: 0.88rem; color: var(--text-secondary);
+  display: flex; align-items: flex-start; gap: 8px;
+}
+.toolkit-card-body ul li::before { flex-shrink: 0; }
+
+.toolkit-what li::before { content: "•"; color: var(--text-muted); }
+.toolkit-when li::before { content: "✓"; color: var(--accent-emerald); font-weight: 700; }
+
+.toolkit-proscons {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 1.5rem; margin-top: 0.25rem;
+}
+.toolkit-proscons .pro-item { display: flex; align-items: flex-start; gap: 6px; font-size: 0.82rem; color: var(--text-secondary); }
+.toolkit-proscons .con-item { display: flex; align-items: flex-start; gap: 6px; font-size: 0.82rem; color: var(--text-secondary); }
+.pro-icon { color: var(--accent-emerald); font-size: 0.75rem; flex-shrink: 0; margin-top: 2px; }
+.con-icon { color: var(--accent-rose); font-size: 0.75rem; flex-shrink: 0; margin-top: 2px; }
+
+.toolkit-scenario {
+  background: rgba(139,92,246,0.06); border-left: 3px solid var(--accent-purple);
+  padding: 0.75rem 1rem; border-radius: 0 8px 8px 0; margin-top: 0.5rem;
+  font-size: 0.85rem; color: var(--text-secondary); font-style: italic;
+}
+.toolkit-scenario strong { color: var(--text-primary); font-style: normal; }
+
+.toolkit-cost {
+  background: var(--bg-glass); border: 1px solid var(--border-glass);
+  padding: 0.5rem 1rem; border-radius: 8px; margin-top: 0.75rem;
+  font-size: 0.8rem; color: var(--text-muted); font-family: 'JetBrains Mono', monospace;
+  text-align: center;
+}
+
+.toolkit-filter-bar {
+  display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center;
+  margin-bottom: 2rem;
+}
+.filter-btn {
+  padding: 0.5rem 1.2rem; border-radius: 50px; background: var(--bg-glass);
+  border: 1px solid var(--border-glass); color: var(--text-secondary);
+  font-weight: 500; font-size: 0.8rem; cursor: pointer; font-family: inherit;
+  transition: var(--transition);
+}
+.filter-btn:hover { color: var(--text-primary); }
+.filter-btn.active { background: var(--gradient-1); color: white; border-color: transparent; }

@@ -30,6 +30,7 @@
     <li><a href="#admin">Admin</a></li>
     <li><a href="#test-prep">Test Prep</a></li>
     <li><a href="#roleplay">Roleplay</a></li>
+    <li><a href="#toolkit">Toolkit</a></li>
     <li><a href="#practice">Practice</a></li>
   </ul>
   <button class="mobile-toggle" aria-label="Toggle menu">☰</button>
@@ -753,6 +754,588 @@
           <div class="ref-item"><span class="ref-icon">8️⃣</span><div><div class="ref-value">Provide logical, organized solutions</div></div></div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Roleplay Toolkit -->
+  <section class="section" id="toolkit">
+    <div class="section-header reveal">
+      <div class="section-label">🧰 Roleplay Reference</div>
+      <h2 class="section-title">Roleplay Toolkit</h2>
+      <p class="section-subtitle">Every technology & solution you can recommend, with exactly when to use it. Your cheat sheet for the 7-minute presentation.</p>
+    </div>
+
+    <div class="toolkit-filter-bar reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="topology">Topology</button>
+      <button class="filter-btn" data-filter="security">Security</button>
+      <button class="filter-btn" data-filter="protocol">Protocol</button>
+      <button class="filter-btn" data-filter="hardware">Hardware</button>
+      <button class="filter-btn" data-filter="storage">Storage</button>
+      <button class="filter-btn" data-filter="service">Service</button>
+    </div>
+
+    <div class="toolkit-grid reveal">
+
+      <!-- Star Topology -->
+      <div class="toolkit-card" data-category="topology">
+        <div class="toolkit-card-header">
+          <div class="toolkit-card-icon" style="background:rgba(59,130,246,0.15);color:var(--accent-blue);">⭐</div>
+          <div>
+            <div class="toolkit-card-title">Star Topology</div>
+            <div class="toolkit-card-subtitle">Central hub/switch architecture</div>
+          </div>
+          <span class="toolkit-badge badge-topology">Topology</span>
+        </div>
+        <div class="toolkit-card-body">
+          <div class="toolkit-label label-what">WHAT IT DOES</div>
+          <ul class="toolkit-what">
+            <li>All devices connect to a central switch/hub</li>
+            <li>Easy to add/remove devices without disruption</li>
+            <li>If one device fails, rest of network stays up</li>
+            <li>Simplest topology to manage and troubleshoot</li>
+          </ul>
+          <div class="toolkit-label label-when">WHEN TO USE IN ROLEPLAY</div>
+          <ul class="toolkit-when">
+            <li>Small to medium business needing a simple, reliable LAN</li>
+            <li>Office with fewer than 100 users</li>
+            <li>Budget-conscious client wanting easy expansion</li>
+            <li>Scenario mentions "ease of management" or "scalability"</li>
+          </ul>
+          <div class="toolkit-proscons">
+            <div>
+              <div class="toolkit-label label-pros">PROS</div>
+              <div class="pro-item"><span class="pro-icon">✅</span> Easy to install & manage</div>
+              <div class="pro-item"><span class="pro-icon">✅</span> Fault isolation per device</div>
+              <div class="pro-item"><span class="pro-icon">✅</span> Highly scalable</div>
+            </div>
+            <div>
+              <div class="toolkit-label label-cons">CONS</div>
+              <div class="con-item"><span class="con-icon">✕</span> Single point of failure at center</div>
+              <div class="con-item"><span class="con-icon">✕</span> Requires more cable than bus</div>
+            </div>
+          </div>
+          <div class="toolkit-label label-scenario">PLUG &amp; PLAY SCRIPT</div>
+          <div class="toolkit-scenario">
+            🎤 <em>"I'd recommend a <strong>star topology</strong> with a managed switch at the center. Each workstation connects directly to the switch, so if any single device fails, the rest of the network stays up. As <strong>[company]</strong> grows and adds new <strong>[employees/devices]</strong>, we simply plug into open switch ports — no network redesign needed."</em>
+          </div>
+          <div class="toolkit-cost">$ Low-Medium · Managed switch $200-$800 · Cabling per drop ~$150</div>
+        </div>
+      </div>
+
+      <!-- Mesh Topology -->
+      <div class="toolkit-card" data-category="topology">
+        <div class="toolkit-card-header">
+          <div class="toolkit-card-icon" style="background:rgba(139,92,246,0.15);color:var(--accent-purple);">🔷</div>
+          <div>
+            <div class="toolkit-card-title">Mesh Topology</div>
+            <div class="toolkit-card-subtitle">Full or partial interconnection</div>
+          </div>
+          <span class="toolkit-badge badge-topology">Topology</span>
+        </div>
+        <div class="toolkit-card-body">
+          <div class="toolkit-label label-what">WHAT IT DOES</div>
+          <ul class="toolkit-what">
+            <li>Every device connects to every other device (full mesh) or most devices (partial)</li>
+            <li>Maximum redundancy — no single point of failure</li>
+            <li>Data can take multiple paths to its destination</li>
+          </ul>
+          <div class="toolkit-label label-when">WHEN TO USE IN ROLEPLAY</div>
+          <ul class="toolkit-when">
+            <li>Mission-critical environments (hospital, financial trading, data center)</li>
+            <li>Scenario emphasizes "zero downtime" or "high availability"</li>
+            <li>WAN backbone between branch offices</li>
+          </ul>
+          <div class="toolkit-proscons">
+            <div>
+              <div class="toolkit-label label-pros">PROS</div>
+              <div class="pro-item"><span class="pro-icon">✅</span> Maximum fault tolerance</div>
+              <div class="pro-item"><span class="pro-icon">✅</span> No single point of failure</div>
+              <div class="pro-item"><span class="pro-icon">✅</span> Self-healing routes</div>
+            </div>
+            <div>
+              <div class="toolkit-label label-cons">CONS</div>
+              <div class="con-item"><span class="con-icon">✕</span> Very expensive (cabling + ports)</div>
+              <div class="con-item"><span class="con-icon">✕</span> Complex to manage at scale</div>
+            </div>
+          </div>
+          <div class="toolkit-label label-scenario">PLUG &amp; PLAY SCRIPT</div>
+          <div class="toolkit-scenario">
+            🎤 <em>"Given that <strong>[company]</strong> requires near-100% uptime for <strong>[critical system]</strong>, I'd implement a <strong>partial mesh topology</strong> for the core network. This provides multiple redundant paths, so if any single link fails, traffic automatically reroutes — ensuring zero disruption to <strong>[key operations]</strong>."</em>
+          </div>
+          <div class="toolkit-cost">$$$ High · Dedicated links between sites $500-$5,000/mo each</div>
+        </div>
+      </div>
+
+      <!-- VLAN Segmentation -->
+      <div class="toolkit-card" data-category="security">
+        <div class="toolkit-card-header">
+          <div class="toolkit-card-icon" style="background:rgba(6,182,212,0.15);color:var(--accent-cyan);">🔀</div>
+          <div>
+            <div class="toolkit-card-title">VLAN Segmentation</div>
+            <div class="toolkit-card-subtitle">802.1Q logical network isolation</div>
+          </div>
+          <span class="toolkit-badge badge-security">Security</span>
+        </div>
+        <div class="toolkit-card-body">
+          <div class="toolkit-label label-what">WHAT IT DOES</div>
+          <ul class="toolkit-what">
+            <li>Logically separates devices into broadcast domains on the same physical switch</li>
+            <li>Isolates departments (HR, Finance, IT) without separate physical infrastructure</li>
+            <li>Reduces broadcast traffic, improves performance and security</li>
+            <li>Uses 802.1Q tagging on trunk ports between switches</li>
+          </ul>
+          <div class="toolkit-label label-when">WHEN TO USE IN ROLEPLAY</div>
+          <ul class="toolkit-when">
+            <li>Any business with multiple departments handling different data sensitivity levels</li>
+            <li>Scenario mentions "isolate departments" or "sensitive data" (HR, Finance, PII)</li>
+            <li>Guest Wi-Fi needs to be separated from internal corporate network</li>
+            <li>Regulatory compliance requirements (HIPAA, PCI-DSS)</li>
+          </ul>
+          <div class="toolkit-proscons">
+            <div>
+              <div class="toolkit-label label-pros">PROS</div>
+              <div class="pro-item"><span class="pro-icon">✅</span> Great security isolation</div>
+              <div class="pro-item"><span class="pro-icon">✅</span> Reduces broadcast storms</div>
+              <div class="pro-item"><span class="pro-icon">✅</span> No extra hardware needed</div>
+            </div>
+            <div>
+              <div class="toolkit-label label-cons">CONS</div>
+              <div class="con-item"><span class="con-icon">✕</span> Needs managed switch</div>
+              <div class="con-item"><span class="con-icon">✕</span> Inter-VLAN routing requires L3 switch/router</div>
+            </div>
+          </div>
+          <div class="toolkit-label label-scenario">PLUG &amp; PLAY SCRIPT</div>
+          <div class="toolkit-scenario">
+            🎤 <em>"I'd configure separate VLANs for each department — for example, VLAN 10 for <strong>[Dept A]</strong>, VLAN 20 for <strong>[Dept B]</strong>, and VLAN 30 for Guest Wi-Fi. This ensures that sensitive <strong>[data type]</strong> can't be accessed from other segments, meeting <strong>[compliance requirement]</strong> without separate physical infrastructure."</em>
+          </div>
+          <div class="toolkit-cost">$ Low · Requires managed switch ($300-$1,500) · No extra cabling</div>
+        </div>
+      </div>
+
+      <!-- Firewall (NGFW) -->
+      <div class="toolkit-card" data-category="security">
+        <div class="toolkit-card-header">
+          <div class="toolkit-card-icon" style="background:rgba(244,63,94,0.15);color:var(--accent-rose);">🛡️</div>
+          <div>
+            <div class="toolkit-card-title">Next-Gen Firewall (NGFW)</div>
+            <div class="toolkit-card-subtitle">Deep packet inspection & application awareness</div>
+          </div>
+          <span class="toolkit-badge badge-security">Security</span>
+        </div>
+        <div class="toolkit-card-body">
+          <div class="toolkit-label label-what">WHAT IT DOES</div>
+          <ul class="toolkit-what">
+            <li>Filters traffic using ACL rules (restrictive policy: deny all except allowed)</li>
+            <li>Stateful inspection tracks active connections</li>
+            <li>Deep packet inspection identifies malware and application-level threats</li>
+            <li>Built-in IDS/IPS for intrusion detection and prevention</li>
+          </ul>
+          <div class="toolkit-label label-when">WHEN TO USE IN ROLEPLAY</div>
+          <ul class="toolkit-when">
+            <li>EVERY scenario. Always recommend a firewall</li>
+            <li>Place between internal LAN and internet (perimeter security)</li>
+            <li>Mention restrictive policy as best practice</li>
+            <li>If budget allows, recommend NGFW over basic packet-filtering</li>
+          </ul>
+          <div class="toolkit-proscons">
+            <div>
+              <div class="toolkit-label label-pros">PROS</div>
+              <div class="pro-item"><span class="pro-icon">✅</span> Application-level visibility</div>
+              <div class="pro-item"><span class="pro-icon">✅</span> IDS/IPS built-in</div>
+              <div class="pro-item"><span class="pro-icon">✅</span> VPN termination support</div>
+            </div>
+            <div>
+              <div class="toolkit-label label-cons">CONS</div>
+              <div class="con-item"><span class="con-icon">✕</span> Enterprise models are expensive</div>
+              <div class="con-item"><span class="con-icon">✕</span> Requires trained staff to configure</div>
+            </div>
+          </div>
+          <div class="toolkit-label label-scenario">PLUG &amp; PLAY SCRIPT</div>
+          <div class="toolkit-scenario">
+            🎤 <em>"I'd deploy a <strong>Next-Gen Firewall</strong> at the network perimeter using a <strong>restrictive policy</strong> — denying all traffic by default and only allowing what's explicitly needed, like ports 80 and 443 for web. The NGFW's deep packet inspection will protect <strong>[company]</strong>'s <strong>[assets/data]</strong> from threats like malware, phishing, and unauthorized access."</em>
+          </div>
+          <div class="toolkit-cost">$$ Medium-High · Cisco ASA/Fortinet $1,000-$10,000+ · Software: free (pfSense)</div>
+        </div>
+      </div>
+
+      <!-- VPN -->
+      <div class="toolkit-card" data-category="security">
+        <div class="toolkit-card-header">
+          <div class="toolkit-card-icon" style="background:rgba(16,185,129,0.15);color:var(--accent-emerald);">🔐</div>
+          <div>
+            <div class="toolkit-card-title">VPN (Virtual Private Network)</div>
+            <div class="toolkit-card-subtitle">Encrypted tunnel over public networks</div>
+          </div>
+          <span class="toolkit-badge badge-security">Security</span>
+        </div>
+        <div class="toolkit-card-body">
+          <div class="toolkit-label label-what">WHAT IT DOES</div>
+          <ul class="toolkit-what">
+            <li>Creates encrypted tunnels for secure remote access over the internet</li>
+            <li>Protocols: IPSec (site-to-site), SSL/TLS (browser-based), PPTP/L2TP (legacy)</li>
+            <li>Allows remote employees to access internal resources securely</li>
+          </ul>
+          <div class="toolkit-label label-when">WHEN TO USE IN ROLEPLAY</div>
+          <ul class="toolkit-when">
+            <li>Scenario mentions "remote workers" or "work from home"</li>
+            <li>Multiple branch offices needing to share resources securely</li>
+            <li>Traveling employees accessing company data from hotels/airports</li>
+            <li>Any time sensitive data crosses the public internet</li>
+          </ul>
+          <div class="toolkit-label label-scenario">PLUG &amp; PLAY SCRIPT</div>
+          <div class="toolkit-scenario">
+            🎤 <em>"<strong>[Remote/traveling employees]</strong> will connect via <strong>SSL/TLS VPN</strong>, creating an encrypted tunnel to the office network. This ensures that <strong>[sensitive data type]</strong> remains fully secure even when accessed from untrusted networks like public Wi-Fi or home internet connections."</em>
+          </div>
+          <div class="toolkit-cost">$ Low-Medium · Built into most firewalls · Standalone: $5-15/user/mo</div>
+        </div>
+      </div>
+
+      <!-- DHCP -->
+      <div class="toolkit-card" data-category="protocol">
+        <div class="toolkit-card-header">
+          <div class="toolkit-card-icon" style="background:rgba(6,182,212,0.15);color:var(--accent-cyan);">🏠</div>
+          <div>
+            <div class="toolkit-card-title">DHCP Server</div>
+            <div class="toolkit-card-subtitle">Dynamic Host Configuration Protocol (DORA)</div>
+          </div>
+          <span class="toolkit-badge badge-protocol">Protocol</span>
+        </div>
+        <div class="toolkit-card-body">
+          <div class="toolkit-label label-what">WHAT IT DOES</div>
+          <ul class="toolkit-what">
+            <li>Automatically assigns IP addresses, subnet masks, gateways, and DNS servers</li>
+            <li>DORA process: Discover → Offer → Request → Acknowledge</li>
+            <li>Eliminates manual IP configuration errors on every device</li>
+          </ul>
+          <div class="toolkit-label label-when">WHEN TO USE IN ROLEPLAY</div>
+          <ul class="toolkit-when">
+            <li>ANY network with more than a handful of devices</li>
+            <li>Guest Wi-Fi or BYOD environments</li>
+            <li>Mention using DHCP reservations for servers/printers (static-like via DHCP)</li>
+          </ul>
+          <div class="toolkit-label label-scenario">PLUG &amp; PLAY SCRIPT</div>
+          <div class="toolkit-scenario">
+            🎤 <em>"With <strong>[number]</strong> devices on the network, manual IP configuration would be impractical and error-prone. A <strong>DHCP server</strong> will dynamically assign addresses using the DORA process. Critical devices like servers and printers will use <strong>DHCP reservations</strong> so their IPs remain consistent but are still centrally managed."</em>
+          </div>
+          <div class="toolkit-cost">$ Free · Built into Windows Server, routers, and Linux</div>
+        </div>
+      </div>
+
+      <!-- DNS -->
+      <div class="toolkit-card" data-category="protocol">
+        <div class="toolkit-card-header">
+          <div class="toolkit-card-icon" style="background:rgba(59,130,246,0.15);color:var(--accent-blue);">🌍</div>
+          <div>
+            <div class="toolkit-card-title">DNS Server</div>
+            <div class="toolkit-card-subtitle">Domain Name System resolution</div>
+          </div>
+          <span class="toolkit-badge badge-protocol">Protocol</span>
+        </div>
+        <div class="toolkit-card-body">
+          <div class="toolkit-label label-what">WHAT IT DOES</div>
+          <ul class="toolkit-what">
+            <li>Translates domain names to IP addresses (e.g., google.com → 142.250.x.x)</li>
+            <li>Hierarchical: Root servers → TLD servers → Authoritative name servers</li>
+            <li>Internal DNS maps hostnames to local IPs within the organization</li>
+          </ul>
+          <div class="toolkit-label label-when">WHEN TO USE IN ROLEPLAY</div>
+          <ul class="toolkit-when">
+            <li>Any network with an internal domain or Active Directory</li>
+            <li>Hosting web/email services that need public DNS records</li>
+            <li>Mention internal DNS for resource access by name instead of IP</li>
+          </ul>
+          <div class="toolkit-label label-scenario">PLUG &amp; PLAY SCRIPT</div>
+          <div class="toolkit-scenario">
+            🎤 <em>"We'll configure an <strong>internal DNS server</strong> integrated with Active Directory so employees can access resources by name instead of memorizing IP addresses. If <strong>[company]</strong> hosts any public services, external DNS records will point the domain to the appropriate servers."</em>
+          </div>
+          <div class="toolkit-cost">$ Free · Built into Windows Server / BIND on Linux</div>
+        </div>
+      </div>
+
+      <!-- Active Directory -->
+      <div class="toolkit-card" data-category="service">
+        <div class="toolkit-card-header">
+          <div class="toolkit-card-icon" style="background:rgba(16,185,129,0.15);color:var(--accent-emerald);">🔐</div>
+          <div>
+            <div class="toolkit-card-title">Active Directory / Domain Controller</div>
+            <div class="toolkit-card-subtitle">Centralized authentication with LDAP/Kerberos</div>
+          </div>
+          <span class="toolkit-badge badge-service">Service</span>
+        </div>
+        <div class="toolkit-card-body">
+          <div class="toolkit-label label-what">WHAT IT DOES</div>
+          <ul class="toolkit-what">
+            <li>Centralized user authentication and authorization using LDAP/Kerberos</li>
+            <li>Group Policy for enforcing security settings across all machines</li>
+            <li>Single sign-on (SSO) — one login for all network resources</li>
+            <li>Manages user accounts, permissions, and computer objects</li>
+          </ul>
+          <div class="toolkit-label label-when">WHEN TO USE IN ROLEPLAY</div>
+          <ul class="toolkit-when">
+            <li>Any business with 10+ employees needing centralized user management</li>
+            <li>Scenario mentions "user accounts," "security policies," or "compliance"</li>
+            <li>Always pair with client-server architecture (not P2P)</li>
+          </ul>
+          <div class="toolkit-label label-scenario">PLUG &amp; PLAY SCRIPT</div>
+          <div class="toolkit-scenario">
+            🎤 <em>"<strong>Active Directory</strong> will manage all user accounts centrally. <strong>Group Policy</strong> will enforce password complexity, screen lock timeouts, and software restrictions across every workstation. This ensures <strong>[compliance standard]</strong> compliance and gives IT full control over who accesses what on the network."</em>
+          </div>
+          <div class="toolkit-cost">$ Medium · Windows Server license required (~$1,000+)</div>
+        </div>
+      </div>
+
+      <!-- DMZ -->
+      <div class="toolkit-card" data-category="security">
+        <div class="toolkit-card-header">
+          <div class="toolkit-card-icon" style="background:rgba(244,63,94,0.15);color:var(--accent-rose);">🚧</div>
+          <div>
+            <div class="toolkit-card-title">DMZ (Demilitarized Zone)</div>
+            <div class="toolkit-card-subtitle">Public-facing service isolation</div>
+          </div>
+          <span class="toolkit-badge badge-security">Security</span>
+        </div>
+        <div class="toolkit-card-body">
+          <div class="toolkit-label label-what">WHAT IT DOES</div>
+          <ul class="toolkit-what">
+            <li>Subnetwork sitting between external internet and internal LAN</li>
+            <li>Houses public-facing servers (Web, FTP, Mail) with a dedicated firewall</li>
+            <li>If a DMZ server is compromised, internal LAN remains protected</li>
+          </ul>
+          <div class="toolkit-label label-when">WHEN TO USE IN ROLEPLAY</div>
+          <ul class="toolkit-when">
+            <li>Company hosts its own website, email server, or FTP server</li>
+            <li>Scenario mentions "public-facing services" or "web server"</li>
+            <li>Pair with dual firewalls: one facing internet, one facing internal LAN</li>
+          </ul>
+          <div class="toolkit-label label-scenario">PLUG &amp; PLAY SCRIPT</div>
+          <div class="toolkit-scenario">
+            🎤 <em>"Any public-facing servers — like <strong>[web/email/FTP]</strong> — will be placed in a <strong>DMZ</strong> between two firewalls. If an attacker compromises a DMZ server, the second firewall prevents lateral movement into the internal LAN where <strong>[sensitive data/systems]</strong> reside."</em>
+          </div>
+          <div class="toolkit-cost">$$ Medium · Requires extra firewall/NIC + network segment</div>
+        </div>
+      </div>
+
+      <!-- QoS -->
+      <div class="toolkit-card" data-category="service">
+        <div class="toolkit-card-header">
+          <div class="toolkit-card-icon" style="background:rgba(16,185,129,0.15);color:var(--accent-emerald);">📞</div>
+          <div>
+            <div class="toolkit-card-title">QoS (Quality of Service)</div>
+            <div class="toolkit-card-subtitle">Traffic prioritization for latency-sensitive apps</div>
+          </div>
+          <span class="toolkit-badge badge-service">Service</span>
+        </div>
+        <div class="toolkit-card-body">
+          <div class="toolkit-label label-what">WHAT IT DOES</div>
+          <ul class="toolkit-what">
+            <li>Prioritizes certain traffic types over others on the network</li>
+            <li>Ensures VoIP calls, video conferencing, and real-time data get bandwidth priority</li>
+            <li>Prevents large file transfers from degrading call quality</li>
+          </ul>
+          <div class="toolkit-label label-when">WHEN TO USE IN ROLEPLAY</div>
+          <ul class="toolkit-when">
+            <li>Scenario mentions VoIP phones, video conferencing, or real-time systems</li>
+            <li>Business with limited bandwidth shared among many users</li>
+            <li>Manufacturing with real-time machinery controls</li>
+          </ul>
+          <div class="toolkit-label label-scenario">PLUG &amp; PLAY SCRIPT</div>
+          <div class="toolkit-scenario">
+            🎤 <em>"<strong>QoS rules</strong> on our managed switches will prioritize <strong>[VoIP/video/real-time traffic]</strong> over general web browsing and file downloads. This guarantees that <strong>[critical application]</strong> always has the bandwidth it needs, even during peak usage periods."</em>
+          </div>
+          <div class="toolkit-cost">$ Free · Configured on managed switches and routers</div>
+        </div>
+      </div>
+
+      <!-- RAID 5 -->
+      <div class="toolkit-card" data-category="storage">
+        <div class="toolkit-card-header">
+          <div class="toolkit-card-icon" style="background:rgba(139,92,246,0.15);color:var(--accent-purple);">💾</div>
+          <div>
+            <div class="toolkit-card-title">RAID 5 + NAS/SAN Storage</div>
+            <div class="toolkit-card-subtitle">Redundant storage with fault tolerance</div>
+          </div>
+          <span class="toolkit-badge badge-storage">Storage</span>
+        </div>
+        <div class="toolkit-card-body">
+          <div class="toolkit-label label-what">WHAT IT DOES</div>
+          <ul class="toolkit-what">
+            <li>RAID 5: Striping with distributed parity across 3+ disks — survives 1 drive failure</li>
+            <li>NAS: File-level storage over Ethernet for shared company files</li>
+            <li>SAN: Block-level, high-speed storage for databases and virtual machines</li>
+          </ul>
+          <div class="toolkit-label label-when">WHEN TO USE IN ROLEPLAY</div>
+          <ul class="toolkit-when">
+            <li>Any scenario needing reliable centralized storage</li>
+            <li>Mention RAID 5 for file servers — good balance of speed + redundancy</li>
+            <li>Use SAN for database-heavy or VM environments; NAS for general file sharing</li>
+          </ul>
+          <div class="toolkit-label label-scenario">PLUG &amp; PLAY SCRIPT</div>
+          <div class="toolkit-scenario">
+            🎤 <em>"The file server will use <strong>RAID 5</strong> with 4 drives — if any single drive fails, data stays fully accessible while we hot-swap the replacement with zero downtime. A <strong>[NAS for file sharing / SAN for databases]</strong> provides centralized, fault-tolerant storage for <strong>[company]</strong>'s <strong>[data type]</strong>."</em>
+          </div>
+          <div class="toolkit-cost">$$ Medium · NAS $500-$3,000 · SAN $5,000-$50,000+ · Drives $100-$400 each</div>
+        </div>
+      </div>
+
+      <!-- UPS + Backup Strategy -->
+      <div class="toolkit-card" data-category="storage">
+        <div class="toolkit-card-header">
+          <div class="toolkit-card-icon" style="background:rgba(245,158,11,0.15);color:var(--accent-amber);">🔋</div>
+          <div>
+            <div class="toolkit-card-title">UPS + 3-2-1 Backup Strategy</div>
+            <div class="toolkit-card-subtitle">Power protection & data recovery</div>
+          </div>
+          <span class="toolkit-badge badge-storage">Storage</span>
+        </div>
+        <div class="toolkit-card-body">
+          <div class="toolkit-label label-what">WHAT IT DOES</div>
+          <ul class="toolkit-what">
+            <li>UPS: Battery backup + surge suppression for servers during power outages</li>
+            <li>3-2-1 Rule: 3 copies of data, 2 different media types, 1 offsite (cloud)</li>
+            <li>Full backup weekly, incremental backups daily for fast recovery</li>
+          </ul>
+          <div class="toolkit-label label-when">WHEN TO USE IN ROLEPLAY</div>
+          <ul class="toolkit-when">
+            <li>ALWAYS mention disaster recovery — judges love completeness</li>
+            <li>Scenario mentions natural disasters, data loss, or business continuity</li>
+            <li>Pair with RTO/RPO objectives to show depth of knowledge</li>
+          </ul>
+          <div class="toolkit-label label-scenario">PLUG &amp; PLAY SCRIPT</div>
+          <div class="toolkit-scenario">
+            🎤 <em>"A <strong>UPS</strong> on each server rack ensures graceful shutdown during power outages. <strong>Full backups</strong> run weekly; <strong>incremental backups</strong> run nightly. All backups replicate to cloud storage following the <strong>3-2-1 rule</strong>. Our target is an <strong>RPO of 24 hours</strong> (max data loss) and <strong>RTO of 4 hours</strong> (max downtime)."</em>
+          </div>
+          <div class="toolkit-cost">$$ Medium · UPS $200-$2,000 · Cloud backup $50-500/mo</div>
+        </div>
+      </div>
+
+      <!-- Zero Trust -->
+      <div class="toolkit-card" data-category="security">
+        <div class="toolkit-card-header">
+          <div class="toolkit-card-icon" style="background:rgba(244,63,94,0.15);color:var(--accent-rose);">🏗️</div>
+          <div>
+            <div class="toolkit-card-title">Zero Trust Architecture</div>
+            <div class="toolkit-card-subtitle">"Never trust, always verify"</div>
+          </div>
+          <span class="toolkit-badge badge-security">Security</span>
+        </div>
+        <div class="toolkit-card-body">
+          <div class="toolkit-label label-what">WHAT IT DOES</div>
+          <ul class="toolkit-what">
+            <li>Verifies every user, device, and connection — even inside the network</li>
+            <li>Least privilege access — users only get what they need</li>
+            <li>Micro-segmentation isolates resources to limit breach impact</li>
+            <li>Continuous monitoring with multi-factor authentication (MFA)</li>
+          </ul>
+          <div class="toolkit-label label-when">WHEN TO USE IN ROLEPLAY</div>
+          <ul class="toolkit-when">
+            <li>Scenario involves remote workers + office workers on same network</li>
+            <li>Handling sensitive/regulated data (healthcare, finance, government)</li>
+            <li>Great "buzz term" to impress judges — shows modern security knowledge</li>
+          </ul>
+          <div class="toolkit-label label-scenario">PLUG &amp; PLAY SCRIPT</div>
+          <div class="toolkit-scenario">
+            🎤 <em>"We'll implement <strong>Zero Trust</strong> principles — every access request is verified regardless of whether the user is on-site or remote. <strong>MFA</strong> is required for all logins, <strong>micro-segmentation</strong> limits lateral movement if a breach occurs, and continuous monitoring logs all access for <strong>[audit/compliance]</strong> review."</em>
+          </div>
+          <div class="toolkit-cost">$$ Medium-High · Implementation complexity varies · MFA tools $3-8/user/mo</div>
+        </div>
+      </div>
+
+      <!-- Load Balancer -->
+      <div class="toolkit-card" data-category="hardware">
+        <div class="toolkit-card-header">
+          <div class="toolkit-card-icon" style="background:rgba(245,158,11,0.15);color:var(--accent-amber);">⚖️</div>
+          <div>
+            <div class="toolkit-card-title">Load Balancer</div>
+            <div class="toolkit-card-subtitle">Distribute traffic across multiple servers</div>
+          </div>
+          <span class="toolkit-badge badge-hardware">Hardware</span>
+        </div>
+        <div class="toolkit-card-body">
+          <div class="toolkit-label label-what">WHAT IT DOES</div>
+          <ul class="toolkit-what">
+            <li>Distributes incoming traffic across multiple servers using methods like round-robin or least connections</li>
+            <li>Ensures no single server gets overwhelmed</li>
+            <li>Provides high availability — if one server fails, traffic routes to others</li>
+          </ul>
+          <div class="toolkit-label label-when">WHEN TO USE IN ROLEPLAY</div>
+          <ul class="toolkit-when">
+            <li>Web application with expected high traffic</li>
+            <li>Scenario mentions "scalability" or "high availability" for servers</li>
+            <li>E-commerce or SaaS platforms expecting traffic spikes</li>
+          </ul>
+          <div class="toolkit-label label-scenario">PLUG &amp; PLAY SCRIPT</div>
+          <div class="toolkit-scenario">
+            🎤 <em>"A <strong>load balancer</strong> in front of multiple <strong>[web/application]</strong> servers distributes traffic using round-robin. If <strong>[company]</strong> experiences traffic spikes, we simply add another server and the load balancer includes it automatically. If any server fails, it's removed from the pool within seconds — zero downtime."</em>
+          </div>
+          <div class="toolkit-cost">$$ Medium · Hardware $2,000-$15,000 · Cloud-based: pay-per-use</div>
+        </div>
+      </div>
+
+      <!-- WPA3 + Wireless -->
+      <div class="toolkit-card" data-category="hardware">
+        <div class="toolkit-card-header">
+          <div class="toolkit-card-icon" style="background:rgba(245,158,11,0.15);color:var(--accent-amber);">📡</div>
+          <div>
+            <div class="toolkit-card-title">Enterprise Wireless (WPA3 + APs)</div>
+            <div class="toolkit-card-subtitle">802.11ax (Wi-Fi 6) with enterprise security</div>
+          </div>
+          <span class="toolkit-badge badge-hardware">Hardware</span>
+        </div>
+        <div class="toolkit-card-body">
+          <div class="toolkit-label label-what">WHAT IT DOES</div>
+          <ul class="toolkit-what">
+            <li>Enterprise Access Points provide Wi-Fi coverage across the facility</li>
+            <li>WPA3 encryption with SAE (Simultaneous Authentication of Equals)</li>
+            <li>RADIUS authentication ties Wi-Fi login to Active Directory credentials</li>
+            <li>Band steering optimizes between 2.4GHz and 5GHz bands</li>
+          </ul>
+          <div class="toolkit-label label-when">WHEN TO USE IN ROLEPLAY</div>
+          <ul class="toolkit-when">
+            <li>Any scenario needing wireless access for laptops, tablets, or BYOD</li>
+            <li>Always specify WPA3 (not WPA2) and enterprise auth (not PSK)</li>
+            <li>Separate SSID for guest network on its own VLAN</li>
+            <li>Mention coverage testing to verify signal in all areas</li>
+          </ul>
+          <div class="toolkit-label label-scenario">PLUG &amp; PLAY SCRIPT</div>
+          <div class="toolkit-scenario">
+            🎤 <em>"We'll deploy <strong>Wi-Fi 6 access points</strong> throughout the facility with coverage testing to verify signal strength in all areas. Employees connect to a <strong>WPA3-Enterprise SSID</strong> authenticated via RADIUS/Active Directory. Guests get a separate SSID on its own <strong>VLAN</strong> with bandwidth limits and content filtering."</em>
+          </div>
+          <div class="toolkit-cost">$$ Medium · Enterprise APs $200-$600 each · Controller $500-$3,000</div>
+        </div>
+      </div>
+
+      <!-- NAT -->
+      <div class="toolkit-card" data-category="protocol">
+        <div class="toolkit-card-header">
+          <div class="toolkit-card-icon" style="background:rgba(6,182,212,0.15);color:var(--accent-cyan);">🔄</div>
+          <div>
+            <div class="toolkit-card-title">NAT (Network Address Translation)</div>
+            <div class="toolkit-card-subtitle">Private-to-public IP translation</div>
+          </div>
+          <span class="toolkit-badge badge-protocol">Protocol</span>
+        </div>
+        <div class="toolkit-card-body">
+          <div class="toolkit-label label-what">WHAT IT DOES</div>
+          <ul class="toolkit-what">
+            <li>Translates private internal IPs (Inside Local) to public IPs (Inside Global)</li>
+            <li>Conserves IPv4 addresses — entire office shares one public IP via PAT</li>
+            <li>Hides internal network structure from the internet</li>
+          </ul>
+          <div class="toolkit-label label-when">WHEN TO USE IN ROLEPLAY</div>
+          <ul class="toolkit-when">
+            <li>Any network connecting to the internet (almost every scenario)</li>
+            <li>Mention PAT (Port Address Translation) for multiple devices sharing one IP</li>
+            <li>Shows understanding of IPv4 limitations and address conservation</li>
+          </ul>
+          <div class="toolkit-label label-scenario">PLUG &amp; PLAY SCRIPT</div>
+          <div class="toolkit-scenario">
+            🎤 <em>"The router will use <strong>PAT</strong> (a form of NAT) so all internal devices on our private <strong>[192.168.x.x / 10.x.x.x]</strong> network share a single public IP from the ISP. This conserves IPv4 addresses and adds a layer of security by hiding <strong>[company]</strong>'s internal addressing scheme from the internet."</em>
+          </div>
+          <div class="toolkit-cost">$ Free · Built into every router</div>
+        </div>
+      </div>
+
     </div>
   </section>
 
